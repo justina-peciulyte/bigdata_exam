@@ -15,7 +15,7 @@ The assignment was completed in two main parts – dataset preparation and colli
 
 The dataset was reduced from 52.8 GB to 712 MB, making it much more managable to parse and analyze. 
 
-The image is available on the Docker Hub image registry: <https://github.com/justina-peciulyte/bigdata_exam/tree/main>. The Python scripts, Dockerfile, and requirements.txt are available on GitHub: .
+The image is available on the Docker Hub image registry: <https://github.com/justina-peciulyte/bigdata_exam/>. The Python scripts, Dockerfile, and requirements.txt are available on GitHub: .
 
 ### Data Description
 
