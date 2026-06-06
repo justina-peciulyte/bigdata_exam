@@ -19,16 +19,6 @@ CENTER_LON = 14.245000
 RADIUS_NM = 50.0
 
 
-# def _env_path(name: str, default: Path) -> Path:
-#     value = os.environ.get(name)
-#     return Path(value) if value else default
-
-
-# def _env_float(name: str, default: float) -> float:
-#     value = os.environ.get(name)
-#     return float(value) if value is not None and value != "" else default
-
-
 def build_parser() -> argparse.ArgumentParser:
     """Builds the CLI argument parser specifically for the preprocessing script."""
     parser = argparse.ArgumentParser(description="Preprocess AIS CSV files into parquet.")
@@ -105,10 +95,12 @@ def preprocess_daily_file(spark: SparkSession,
                     "longitude",
                     "sog",
                     "navigational_status",
-                    "name",]
+                    "name",
+                    "ship_type",]
     cleaned = parsed.select(*keep_columns).dropna(subset=["timestamp", "mmsi", "latitude", "longitude"])
 
     # 5. Use a bounding box filter to limit the data to the area around the center coordinate.
+    # Basically, we calculate a lat/lon delta that corresponds to the radius in NM and filter points that are within that box.
     lat_delta_deg = radius_nm / 60.0
     lon_delta_deg = radius_nm / (60.0 * math.cos(math.radians(center_lat)))
 
