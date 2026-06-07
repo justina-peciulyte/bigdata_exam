@@ -146,7 +146,7 @@ Configurable parameters can be checked by overriding the CMD and running one of 
 1. For `main.py`:
 
 ```
-docker run --rm -v $(pwd):/workspace justinap4/ais-collision:latest python main.py --help
+docker run --rm -v ${PWD}:/workspace justinap4/ais-collision:latest python main.py --help
 ```
 
 | Parameter     | Description                                                         |
@@ -158,7 +158,7 @@ docker run --rm -v $(pwd):/workspace justinap4/ais-collision:latest python main.
 2. For `preprocessing.py`:
 
 ```
-docker run --rm -v $(pwd):/workspace justinap4/ais-collision:latest python preprocessing.py --help
+docker run --rm -v ${PWD}:/workspace justinap4/ais-collision:latest python preprocessing.py --help
 ```
 
 | Parameter     | Description                                                         |
