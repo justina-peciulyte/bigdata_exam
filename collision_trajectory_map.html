@@ -1,0 +1,3772 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5035bc322fcdeca34a5810ce3ba1c252 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5035bc322fcdeca34a5810ce3ba1c252" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5035bc322fcdeca34a5810ce3ba1c252 = L.map(
+                "map_5035bc322fcdeca34a5810ce3ba1c252",
+                {
+                    center: [54.634778999999995, 14.345543],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e72300e0cd4bd0ffea1d4c9f5339a083 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_e72300e0cd4bd0ffea1d4c9f5339a083.addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+            var poly_line_c002a3128b726a8f8ab0317b9cc32b8d = L.polyline(
+                [[54.644347, 14.333102], [54.644313, 14.333098], [54.64424, 14.333065], [54.64419, 14.333025], [54.644133, 14.33297], [54.643897, 14.332872], [54.643817, 14.332818], [54.643693, 14.332787], [54.643597, 14.332763], [54.643287, 14.332768], [54.643123, 14.332778], [54.642963, 14.332813], [54.642773, 14.33288], [54.642643, 14.332963], [54.642237, 14.333268], [54.642033, 14.333425], [54.64183, 14.333598], [54.64162, 14.333818], [54.641473, 14.333998], [54.641033, 14.334993], [54.640927, 14.335398], [54.640763, 14.336198], [54.640667, 14.336707], [54.640593, 14.337113], [54.64053, 14.337555], [54.640447, 14.338055], [54.640447, 14.338055], [54.640373, 14.338513], [54.6403, 14.338862], [54.640187, 14.3394], [54.640073, 14.339787], [54.639933, 14.340207], [54.639747, 14.34062], [54.639543, 14.340965], [54.63938, 14.341223], [54.639113, 14.34159], [54.63891, 14.341862], [54.638673, 14.342128], [54.638397, 14.342358], [54.63816, 14.342505], [54.637877, 14.342668], [54.637657, 14.342898], [54.637453, 14.343123], [54.63725, 14.343417], [54.637013, 14.343737], [54.636817, 14.344015], [54.636557, 14.344327], [54.63607, 14.344738], [54.635817, 14.344932], [54.635297, 14.34531], [54.63475, 14.345683], [54.634523, 14.34586], [54.634017, 14.346193], [54.63383, 14.34641], [54.633553, 14.346613], [54.63331, 14.346835], [54.633067, 14.34699], [54.632823, 14.347187], [54.632547, 14.347382], [54.632327, 14.347522], [54.632327, 14.347522], [54.632067, 14.347725], [54.631813, 14.347922], [54.631577, 14.348102], [54.631317, 14.348285], [54.631023, 14.348505], [54.630753, 14.34865], [54.630453, 14.348788], [54.6302, 14.348898], [54.62999, 14.349012], [54.62977, 14.349175], [54.62955, 14.349322], [54.629357, 14.34942], [54.629093, 14.34958], [54.628883, 14.349685], [54.62868, 14.349783], [54.628467, 14.349915], [54.62825, 14.350018], [54.628053, 14.350038], [54.627637, 14.349652], [54.627607, 14.349248], [54.627947, 14.348435], [54.628133, 14.348028], [54.62864, 14.347042], [54.62889, 14.346752], [54.62955, 14.346585], [54.63064, 14.34633], [54.631, 14.346695], [54.631047, 14.346945], [54.631063, 14.347308], [54.631, 14.347673], [54.630893, 14.347932], [54.63074, 14.34812], [54.630617, 14.348225], [54.630543, 14.348303], [54.630437, 14.34837], [54.63034, 14.348423], [54.630233, 14.348432], [54.630103, 14.348523], [54.629957, 14.348643], [54.629827, 14.34869], [54.629713, 14.348695], [54.6296, 14.348658], [54.629527, 14.348632]],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#c51eba", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+            poly_line_c002a3128b726a8f8ab0317b9cc32b8d.bindTooltip(
+                `<div>
+                     DZI-100 (261002520)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a7cd41deca9c154d8bdef33a14dae6f3 = L.circleMarker(
+                [54.644347, 14.333102],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+            var circle_marker_206da2bce246910ced2d3a770f8ce6c1 = L.circleMarker(
+                [54.644347, 14.333102],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_09e8ebd0cdfa84e43f3596c73e340956 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a6cb1ac393fea9d89a2eabbcb6ad9144 = $(`<div id="html_a6cb1ac393fea9d89a2eabbcb6ad9144" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:40:13<br>Lat/Lon: (54.644347, 14.333102)<br>SOG: 0.80 kn</div>`)[0];
+                popup_09e8ebd0cdfa84e43f3596c73e340956.setContent(html_a6cb1ac393fea9d89a2eabbcb6ad9144);
+            
+        
+
+        circle_marker_206da2bce246910ced2d3a770f8ce6c1.bindPopup(popup_09e8ebd0cdfa84e43f3596c73e340956)
+        ;
+
+        
+    
+    
+            circle_marker_206da2bce246910ced2d3a770f8ce6c1.bindTooltip(
+                `<div>
+                     2021-12-17 20:40:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3c57f1149fb5558f61a1797cf8b378d7 = L.circleMarker(
+                [54.644313, 14.333098],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_4ba69c783fba826aa58b71aa85f69e7c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ec770239e8b39c5d939473afb1ce00d = $(`<div id="html_1ec770239e8b39c5d939473afb1ce00d" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:40:22<br>Lat/Lon: (54.644313, 14.333098)<br>SOG: 2.90 kn</div>`)[0];
+                popup_4ba69c783fba826aa58b71aa85f69e7c.setContent(html_1ec770239e8b39c5d939473afb1ce00d);
+            
+        
+
+        circle_marker_3c57f1149fb5558f61a1797cf8b378d7.bindPopup(popup_4ba69c783fba826aa58b71aa85f69e7c)
+        ;
+
+        
+    
+    
+            circle_marker_3c57f1149fb5558f61a1797cf8b378d7.bindTooltip(
+                `<div>
+                     2021-12-17 20:40:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_29ede15fb08aaa7734f20d502eaeb265 = L.circleMarker(
+                [54.64424, 14.333065],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_1d7e8d5b9fd68376e4e28b826b450df5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fca6cf95f0956c6c11c68a8aee65142b = $(`<div id="html_fca6cf95f0956c6c11c68a8aee65142b" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:40:33<br>Lat/Lon: (54.644240, 14.333065)<br>SOG: 2.60 kn</div>`)[0];
+                popup_1d7e8d5b9fd68376e4e28b826b450df5.setContent(html_fca6cf95f0956c6c11c68a8aee65142b);
+            
+        
+
+        circle_marker_29ede15fb08aaa7734f20d502eaeb265.bindPopup(popup_1d7e8d5b9fd68376e4e28b826b450df5)
+        ;
+
+        
+    
+    
+            circle_marker_29ede15fb08aaa7734f20d502eaeb265.bindTooltip(
+                `<div>
+                     2021-12-17 20:40:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7a9db64cfbe7bd607021d36001e1bb13 = L.circleMarker(
+                [54.64419, 14.333025],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_18b401be7eed614a7e47c258cd5619d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce430822ae8e4ccd6dbf3e5803194d85 = $(`<div id="html_ce430822ae8e4ccd6dbf3e5803194d85" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:40:42<br>Lat/Lon: (54.644190, 14.333025)<br>SOG: 2.40 kn</div>`)[0];
+                popup_18b401be7eed614a7e47c258cd5619d2.setContent(html_ce430822ae8e4ccd6dbf3e5803194d85);
+            
+        
+
+        circle_marker_7a9db64cfbe7bd607021d36001e1bb13.bindPopup(popup_18b401be7eed614a7e47c258cd5619d2)
+        ;
+
+        
+    
+    
+            circle_marker_7a9db64cfbe7bd607021d36001e1bb13.bindTooltip(
+                `<div>
+                     2021-12-17 20:40:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_84d847f5f2762a28a5912361aa8a2255 = L.circleMarker(
+                [54.644133, 14.33297],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_a0fe81a11b31006ad6e4e477004fe1c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_088e6f5091e7d1a06c40c34c2fac0fbb = $(`<div id="html_088e6f5091e7d1a06c40c34c2fac0fbb" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:40:52<br>Lat/Lon: (54.644133, 14.332970)<br>SOG: 1.70 kn</div>`)[0];
+                popup_a0fe81a11b31006ad6e4e477004fe1c2.setContent(html_088e6f5091e7d1a06c40c34c2fac0fbb);
+            
+        
+
+        circle_marker_84d847f5f2762a28a5912361aa8a2255.bindPopup(popup_a0fe81a11b31006ad6e4e477004fe1c2)
+        ;
+
+        
+    
+    
+            circle_marker_84d847f5f2762a28a5912361aa8a2255.bindTooltip(
+                `<div>
+                     2021-12-17 20:40:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cd90216e982b1f8fb0e2ba2f00fed070 = L.circleMarker(
+                [54.643897, 14.332872],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_caa7b401c27019d1e5f1f1a50e90fc3b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22cb4b10924bbf7ded0269bc23dfbb85 = $(`<div id="html_22cb4b10924bbf7ded0269bc23dfbb85" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:41:22<br>Lat/Lon: (54.643897, 14.332872)<br>SOG: 2.50 kn</div>`)[0];
+                popup_caa7b401c27019d1e5f1f1a50e90fc3b.setContent(html_22cb4b10924bbf7ded0269bc23dfbb85);
+            
+        
+
+        circle_marker_cd90216e982b1f8fb0e2ba2f00fed070.bindPopup(popup_caa7b401c27019d1e5f1f1a50e90fc3b)
+        ;
+
+        
+    
+    
+            circle_marker_cd90216e982b1f8fb0e2ba2f00fed070.bindTooltip(
+                `<div>
+                     2021-12-17 20:41:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_528fb7f01efb1873c39b5bd366d75f14 = L.circleMarker(
+                [54.643817, 14.332818],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_f44f386c756cf272832507074c33c228 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf966f9039dfbd9fc11b7d1a943ce237 = $(`<div id="html_bf966f9039dfbd9fc11b7d1a943ce237" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:41:33<br>Lat/Lon: (54.643817, 14.332818)<br>SOG: 1.80 kn</div>`)[0];
+                popup_f44f386c756cf272832507074c33c228.setContent(html_bf966f9039dfbd9fc11b7d1a943ce237);
+            
+        
+
+        circle_marker_528fb7f01efb1873c39b5bd366d75f14.bindPopup(popup_f44f386c756cf272832507074c33c228)
+        ;
+
+        
+    
+    
+            circle_marker_528fb7f01efb1873c39b5bd366d75f14.bindTooltip(
+                `<div>
+                     2021-12-17 20:41:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4e7f332c0be5cc35d6f87d6eb7c9dc61 = L.circleMarker(
+                [54.643693, 14.332787],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_978c3a5f1ea2058d3754d38072a8ef46 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_341218f6c00ad1a72c15b3a44ae8cb91 = $(`<div id="html_341218f6c00ad1a72c15b3a44ae8cb91" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:41:43<br>Lat/Lon: (54.643693, 14.332787)<br>SOG: 1.90 kn</div>`)[0];
+                popup_978c3a5f1ea2058d3754d38072a8ef46.setContent(html_341218f6c00ad1a72c15b3a44ae8cb91);
+            
+        
+
+        circle_marker_4e7f332c0be5cc35d6f87d6eb7c9dc61.bindPopup(popup_978c3a5f1ea2058d3754d38072a8ef46)
+        ;
+
+        
+    
+    
+            circle_marker_4e7f332c0be5cc35d6f87d6eb7c9dc61.bindTooltip(
+                `<div>
+                     2021-12-17 20:41:43
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_de0e3e3d60ad153631ad14aae045769e = L.circleMarker(
+                [54.643597, 14.332763],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_1c0d097793bbd4aaf90fdc51f1ec4031 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c3d6d5b7585bef55a700dc86d36e9ee0 = $(`<div id="html_c3d6d5b7585bef55a700dc86d36e9ee0" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:41:52<br>Lat/Lon: (54.643597, 14.332763)<br>SOG: 3.60 kn</div>`)[0];
+                popup_1c0d097793bbd4aaf90fdc51f1ec4031.setContent(html_c3d6d5b7585bef55a700dc86d36e9ee0);
+            
+        
+
+        circle_marker_de0e3e3d60ad153631ad14aae045769e.bindPopup(popup_1c0d097793bbd4aaf90fdc51f1ec4031)
+        ;
+
+        
+    
+    
+            circle_marker_de0e3e3d60ad153631ad14aae045769e.bindTooltip(
+                `<div>
+                     2021-12-17 20:41:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3c90b66aa752a1d76159baf48b57f4b9 = L.circleMarker(
+                [54.643287, 14.332768],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_b534c8222fffdeac79795cd32b9a19eb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c2c5d4c109f9ecb14ebcc70220e384e = $(`<div id="html_7c2c5d4c109f9ecb14ebcc70220e384e" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:42:12<br>Lat/Lon: (54.643287, 14.332768)<br>SOG: 3.50 kn</div>`)[0];
+                popup_b534c8222fffdeac79795cd32b9a19eb.setContent(html_7c2c5d4c109f9ecb14ebcc70220e384e);
+            
+        
+
+        circle_marker_3c90b66aa752a1d76159baf48b57f4b9.bindPopup(popup_b534c8222fffdeac79795cd32b9a19eb)
+        ;
+
+        
+    
+    
+            circle_marker_3c90b66aa752a1d76159baf48b57f4b9.bindTooltip(
+                `<div>
+                     2021-12-17 20:42:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_509f739b87ddfc13bededbd429df9270 = L.circleMarker(
+                [54.643123, 14.332778],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_eb9fb983d63ab0d61106a6d6e69d6b83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fe8c7237a6afa4b8fd1d245ae45bbf8 = $(`<div id="html_5fe8c7237a6afa4b8fd1d245ae45bbf8" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:42:22<br>Lat/Lon: (54.643123, 14.332778)<br>SOG: 3.90 kn</div>`)[0];
+                popup_eb9fb983d63ab0d61106a6d6e69d6b83.setContent(html_5fe8c7237a6afa4b8fd1d245ae45bbf8);
+            
+        
+
+        circle_marker_509f739b87ddfc13bededbd429df9270.bindPopup(popup_eb9fb983d63ab0d61106a6d6e69d6b83)
+        ;
+
+        
+    
+    
+            circle_marker_509f739b87ddfc13bededbd429df9270.bindTooltip(
+                `<div>
+                     2021-12-17 20:42:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_67f3f58311208f3fb55a599c6b0e3a95 = L.circleMarker(
+                [54.642963, 14.332813],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_d3d7f22585229a04435e9fdaea4e042f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0eab38e6e40f82e39d6a5b042ec91a18 = $(`<div id="html_0eab38e6e40f82e39d6a5b042ec91a18" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:42:33<br>Lat/Lon: (54.642963, 14.332813)<br>SOG: 3.90 kn</div>`)[0];
+                popup_d3d7f22585229a04435e9fdaea4e042f.setContent(html_0eab38e6e40f82e39d6a5b042ec91a18);
+            
+        
+
+        circle_marker_67f3f58311208f3fb55a599c6b0e3a95.bindPopup(popup_d3d7f22585229a04435e9fdaea4e042f)
+        ;
+
+        
+    
+    
+            circle_marker_67f3f58311208f3fb55a599c6b0e3a95.bindTooltip(
+                `<div>
+                     2021-12-17 20:42:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e666b2ea689f3886ee2f61c3058e0b0b = L.circleMarker(
+                [54.642773, 14.33288],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_d7c14024d4531867098802b375207461 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a57ece7c566b0d8dc62084ae6fe3150 = $(`<div id="html_5a57ece7c566b0d8dc62084ae6fe3150" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:42:43<br>Lat/Lon: (54.642773, 14.332880)<br>SOG: 3.80 kn</div>`)[0];
+                popup_d7c14024d4531867098802b375207461.setContent(html_5a57ece7c566b0d8dc62084ae6fe3150);
+            
+        
+
+        circle_marker_e666b2ea689f3886ee2f61c3058e0b0b.bindPopup(popup_d7c14024d4531867098802b375207461)
+        ;
+
+        
+    
+    
+            circle_marker_e666b2ea689f3886ee2f61c3058e0b0b.bindTooltip(
+                `<div>
+                     2021-12-17 20:42:43
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e427a30d07656ff6392eaf327d94ccef = L.circleMarker(
+                [54.642643, 14.332963],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_9868879eb74ef062bf16b6010a35a0fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_192ece3507ff1c34245c8893bd3d5b42 = $(`<div id="html_192ece3507ff1c34245c8893bd3d5b42" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:42:52<br>Lat/Lon: (54.642643, 14.332963)<br>SOG: 4.40 kn</div>`)[0];
+                popup_9868879eb74ef062bf16b6010a35a0fd.setContent(html_192ece3507ff1c34245c8893bd3d5b42);
+            
+        
+
+        circle_marker_e427a30d07656ff6392eaf327d94ccef.bindPopup(popup_9868879eb74ef062bf16b6010a35a0fd)
+        ;
+
+        
+    
+    
+            circle_marker_e427a30d07656ff6392eaf327d94ccef.bindTooltip(
+                `<div>
+                     2021-12-17 20:42:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a7e278d33beb22c3f81bdec9abe22fb1 = L.circleMarker(
+                [54.642237, 14.333268],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_34ce5bf6d75c377af409ac83c474bd06 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd38840911146bc58e5b271f6ec89570 = $(`<div id="html_cd38840911146bc58e5b271f6ec89570" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:43:12<br>Lat/Lon: (54.642237, 14.333268)<br>SOG: 4.80 kn</div>`)[0];
+                popup_34ce5bf6d75c377af409ac83c474bd06.setContent(html_cd38840911146bc58e5b271f6ec89570);
+            
+        
+
+        circle_marker_a7e278d33beb22c3f81bdec9abe22fb1.bindPopup(popup_34ce5bf6d75c377af409ac83c474bd06)
+        ;
+
+        
+    
+    
+            circle_marker_a7e278d33beb22c3f81bdec9abe22fb1.bindTooltip(
+                `<div>
+                     2021-12-17 20:43:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_015d96781d995cb9e501fb4550b9d167 = L.circleMarker(
+                [54.642033, 14.333425],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_30ef7e55827731f50a30c06bb19365a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eef0d2d23e18916dad1a0010c3bf56b6 = $(`<div id="html_eef0d2d23e18916dad1a0010c3bf56b6" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:43:22<br>Lat/Lon: (54.642033, 14.333425)<br>SOG: 4.90 kn</div>`)[0];
+                popup_30ef7e55827731f50a30c06bb19365a8.setContent(html_eef0d2d23e18916dad1a0010c3bf56b6);
+            
+        
+
+        circle_marker_015d96781d995cb9e501fb4550b9d167.bindPopup(popup_30ef7e55827731f50a30c06bb19365a8)
+        ;
+
+        
+    
+    
+            circle_marker_015d96781d995cb9e501fb4550b9d167.bindTooltip(
+                `<div>
+                     2021-12-17 20:43:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_922433df02109143cf626774464179f3 = L.circleMarker(
+                [54.64183, 14.333598],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_17dbfc6957f8b9971a260a35e52bd075 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e968fb1f873a0ae54fb8310b01e34a6 = $(`<div id="html_5e968fb1f873a0ae54fb8310b01e34a6" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:43:33<br>Lat/Lon: (54.641830, 14.333598)<br>SOG: 4.80 kn</div>`)[0];
+                popup_17dbfc6957f8b9971a260a35e52bd075.setContent(html_5e968fb1f873a0ae54fb8310b01e34a6);
+            
+        
+
+        circle_marker_922433df02109143cf626774464179f3.bindPopup(popup_17dbfc6957f8b9971a260a35e52bd075)
+        ;
+
+        
+    
+    
+            circle_marker_922433df02109143cf626774464179f3.bindTooltip(
+                `<div>
+                     2021-12-17 20:43:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_64b51d996d77f2a82cc1c52ca2d8b7b2 = L.circleMarker(
+                [54.64162, 14.333818],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_fd120d1069ba154447f63f13a5373b2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f89d49b2511fe02f515e49576f498bb9 = $(`<div id="html_f89d49b2511fe02f515e49576f498bb9" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:43:43<br>Lat/Lon: (54.641620, 14.333818)<br>SOG: 5.10 kn</div>`)[0];
+                popup_fd120d1069ba154447f63f13a5373b2a.setContent(html_f89d49b2511fe02f515e49576f498bb9);
+            
+        
+
+        circle_marker_64b51d996d77f2a82cc1c52ca2d8b7b2.bindPopup(popup_fd120d1069ba154447f63f13a5373b2a)
+        ;
+
+        
+    
+    
+            circle_marker_64b51d996d77f2a82cc1c52ca2d8b7b2.bindTooltip(
+                `<div>
+                     2021-12-17 20:43:43
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f79bd50b18bd3661f8e1bafe945fed76 = L.circleMarker(
+                [54.641473, 14.333998],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_a1845b7cf4c718ebde3c43f1d143813f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17560886b27fbf526f3f68497b2c2af8 = $(`<div id="html_17560886b27fbf526f3f68497b2c2af8" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:43:52<br>Lat/Lon: (54.641473, 14.333998)<br>SOG: 4.50 kn</div>`)[0];
+                popup_a1845b7cf4c718ebde3c43f1d143813f.setContent(html_17560886b27fbf526f3f68497b2c2af8);
+            
+        
+
+        circle_marker_f79bd50b18bd3661f8e1bafe945fed76.bindPopup(popup_a1845b7cf4c718ebde3c43f1d143813f)
+        ;
+
+        
+    
+    
+            circle_marker_f79bd50b18bd3661f8e1bafe945fed76.bindTooltip(
+                `<div>
+                     2021-12-17 20:43:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_efaad0d20229ebc9c5b4aa17c9ba769d = L.circleMarker(
+                [54.641033, 14.334993],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_daf8d6242f4926e11849d12bb7c3e7ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d85c1bf9a1ce9699dcc6b128e76c0e85 = $(`<div id="html_d85c1bf9a1ce9699dcc6b128e76c0e85" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:44:22<br>Lat/Lon: (54.641033, 14.334993)<br>SOG: 5.60 kn</div>`)[0];
+                popup_daf8d6242f4926e11849d12bb7c3e7ae.setContent(html_d85c1bf9a1ce9699dcc6b128e76c0e85);
+            
+        
+
+        circle_marker_efaad0d20229ebc9c5b4aa17c9ba769d.bindPopup(popup_daf8d6242f4926e11849d12bb7c3e7ae)
+        ;
+
+        
+    
+    
+            circle_marker_efaad0d20229ebc9c5b4aa17c9ba769d.bindTooltip(
+                `<div>
+                     2021-12-17 20:44:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8d0de9b811527cbda900caa911c56185 = L.circleMarker(
+                [54.640927, 14.335398],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_91a6ff7090897b35938d2c50e1485484 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e166bf6cd14ef273d9b3d3f7974f1925 = $(`<div id="html_e166bf6cd14ef273d9b3d3f7974f1925" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:44:33<br>Lat/Lon: (54.640927, 14.335398)<br>SOG: 5.70 kn</div>`)[0];
+                popup_91a6ff7090897b35938d2c50e1485484.setContent(html_e166bf6cd14ef273d9b3d3f7974f1925);
+            
+        
+
+        circle_marker_8d0de9b811527cbda900caa911c56185.bindPopup(popup_91a6ff7090897b35938d2c50e1485484)
+        ;
+
+        
+    
+    
+            circle_marker_8d0de9b811527cbda900caa911c56185.bindTooltip(
+                `<div>
+                     2021-12-17 20:44:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fbca6fab809e6f474d42c93bbd34e988 = L.circleMarker(
+                [54.640763, 14.336198],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_65b5f7d46366b8362e165e1e80c8f3b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ba5d77d737c5b9738ae00189abeea33 = $(`<div id="html_9ba5d77d737c5b9738ae00189abeea33" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:44:52<br>Lat/Lon: (54.640763, 14.336198)<br>SOG: 4.80 kn</div>`)[0];
+                popup_65b5f7d46366b8362e165e1e80c8f3b5.setContent(html_9ba5d77d737c5b9738ae00189abeea33);
+            
+        
+
+        circle_marker_fbca6fab809e6f474d42c93bbd34e988.bindPopup(popup_65b5f7d46366b8362e165e1e80c8f3b5)
+        ;
+
+        
+    
+    
+            circle_marker_fbca6fab809e6f474d42c93bbd34e988.bindTooltip(
+                `<div>
+                     2021-12-17 20:44:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8a8f8ee198de5c64d5ff12cfbd3e04b = L.circleMarker(
+                [54.640667, 14.336707],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_1768eca011eb5e28a7bc825b668b0eb9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32e821f1dddbf67e73b061b9be21bedb = $(`<div id="html_32e821f1dddbf67e73b061b9be21bedb" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:45:03<br>Lat/Lon: (54.640667, 14.336707)<br>SOG: 6.30 kn</div>`)[0];
+                popup_1768eca011eb5e28a7bc825b668b0eb9.setContent(html_32e821f1dddbf67e73b061b9be21bedb);
+            
+        
+
+        circle_marker_a8a8f8ee198de5c64d5ff12cfbd3e04b.bindPopup(popup_1768eca011eb5e28a7bc825b668b0eb9)
+        ;
+
+        
+    
+    
+            circle_marker_a8a8f8ee198de5c64d5ff12cfbd3e04b.bindTooltip(
+                `<div>
+                     2021-12-17 20:45:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b1eba539f73e3e8c7decc1866fcb9155 = L.circleMarker(
+                [54.640593, 14.337113],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_87cada4ffd763601fab31729bcabc00d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5cd81cf113798686d5aac93948da1c6f = $(`<div id="html_5cd81cf113798686d5aac93948da1c6f" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:45:12<br>Lat/Lon: (54.640593, 14.337113)<br>SOG: 5.90 kn</div>`)[0];
+                popup_87cada4ffd763601fab31729bcabc00d.setContent(html_5cd81cf113798686d5aac93948da1c6f);
+            
+        
+
+        circle_marker_b1eba539f73e3e8c7decc1866fcb9155.bindPopup(popup_87cada4ffd763601fab31729bcabc00d)
+        ;
+
+        
+    
+    
+            circle_marker_b1eba539f73e3e8c7decc1866fcb9155.bindTooltip(
+                `<div>
+                     2021-12-17 20:45:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1fa979dd846d2bcee6ff271be6ec3251 = L.circleMarker(
+                [54.64053, 14.337555],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_1c7fb5b1b94257faa63d38c4271aab95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c92f2712afa2dd7fa6259ccb6f5d4c1 = $(`<div id="html_6c92f2712afa2dd7fa6259ccb6f5d4c1" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:45:22<br>Lat/Lon: (54.640530, 14.337555)<br>SOG: 5.30 kn</div>`)[0];
+                popup_1c7fb5b1b94257faa63d38c4271aab95.setContent(html_6c92f2712afa2dd7fa6259ccb6f5d4c1);
+            
+        
+
+        circle_marker_1fa979dd846d2bcee6ff271be6ec3251.bindPopup(popup_1c7fb5b1b94257faa63d38c4271aab95)
+        ;
+
+        
+    
+    
+            circle_marker_1fa979dd846d2bcee6ff271be6ec3251.bindTooltip(
+                `<div>
+                     2021-12-17 20:45:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1a59fae500f7546f05ca2294924293f8 = L.circleMarker(
+                [54.640447, 14.338055],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_dcbd717a3ff624b57596612a4fff02e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_03970c976ae6bc2758437b25dc8af0cf = $(`<div id="html_03970c976ae6bc2758437b25dc8af0cf" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:45:34<br>Lat/Lon: (54.640447, 14.338055)<br>SOG: 6.40 kn</div>`)[0];
+                popup_dcbd717a3ff624b57596612a4fff02e7.setContent(html_03970c976ae6bc2758437b25dc8af0cf);
+            
+        
+
+        circle_marker_1a59fae500f7546f05ca2294924293f8.bindPopup(popup_dcbd717a3ff624b57596612a4fff02e7)
+        ;
+
+        
+    
+    
+            circle_marker_1a59fae500f7546f05ca2294924293f8.bindTooltip(
+                `<div>
+                     2021-12-17 20:45:34
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_953e86d86190278989031b84c714e26e = L.circleMarker(
+                [54.640447, 14.338055],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_39e56d9fe9d6627ca4171be99cd2d911 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_668a1a4ae72763904fd22e01ad9406c5 = $(`<div id="html_668a1a4ae72763904fd22e01ad9406c5" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:45:36<br>Lat/Lon: (54.640447, 14.338055)<br>SOG: 6.40 kn</div>`)[0];
+                popup_39e56d9fe9d6627ca4171be99cd2d911.setContent(html_668a1a4ae72763904fd22e01ad9406c5);
+            
+        
+
+        circle_marker_953e86d86190278989031b84c714e26e.bindPopup(popup_39e56d9fe9d6627ca4171be99cd2d911)
+        ;
+
+        
+    
+    
+            circle_marker_953e86d86190278989031b84c714e26e.bindTooltip(
+                `<div>
+                     2021-12-17 20:45:36
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_43b30d88b891830ecf1f4db1b4f9e453 = L.circleMarker(
+                [54.640373, 14.338513],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_4f4626be87d1e3e6437bff58aa1703c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73b30fee60f1b66bb9a47fccfd9d4aec = $(`<div id="html_73b30fee60f1b66bb9a47fccfd9d4aec" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:45:43<br>Lat/Lon: (54.640373, 14.338513)<br>SOG: 6.20 kn</div>`)[0];
+                popup_4f4626be87d1e3e6437bff58aa1703c2.setContent(html_73b30fee60f1b66bb9a47fccfd9d4aec);
+            
+        
+
+        circle_marker_43b30d88b891830ecf1f4db1b4f9e453.bindPopup(popup_4f4626be87d1e3e6437bff58aa1703c2)
+        ;
+
+        
+    
+    
+            circle_marker_43b30d88b891830ecf1f4db1b4f9e453.bindTooltip(
+                `<div>
+                     2021-12-17 20:45:43
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_255ecde22e8b760d040b6c123a139cd5 = L.circleMarker(
+                [54.6403, 14.338862],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_278781aaeee6b5c9c4679ac9e1d1692d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd473e9ac53be1d742dc26377aed1c8d = $(`<div id="html_cd473e9ac53be1d742dc26377aed1c8d" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:45:52<br>Lat/Lon: (54.640300, 14.338862)<br>SOG: 5.80 kn</div>`)[0];
+                popup_278781aaeee6b5c9c4679ac9e1d1692d.setContent(html_cd473e9ac53be1d742dc26377aed1c8d);
+            
+        
+
+        circle_marker_255ecde22e8b760d040b6c123a139cd5.bindPopup(popup_278781aaeee6b5c9c4679ac9e1d1692d)
+        ;
+
+        
+    
+    
+            circle_marker_255ecde22e8b760d040b6c123a139cd5.bindTooltip(
+                `<div>
+                     2021-12-17 20:45:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f06f659180479237ec53502c48bd8d6d = L.circleMarker(
+                [54.640187, 14.3394],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_05e892a9f8e07ebb1ea7349129ab0df1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c72e84e464e668ee7cd296af02fb965 = $(`<div id="html_5c72e84e464e668ee7cd296af02fb965" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:46:03<br>Lat/Lon: (54.640187, 14.339400)<br>SOG: 6.50 kn</div>`)[0];
+                popup_05e892a9f8e07ebb1ea7349129ab0df1.setContent(html_5c72e84e464e668ee7cd296af02fb965);
+            
+        
+
+        circle_marker_f06f659180479237ec53502c48bd8d6d.bindPopup(popup_05e892a9f8e07ebb1ea7349129ab0df1)
+        ;
+
+        
+    
+    
+            circle_marker_f06f659180479237ec53502c48bd8d6d.bindTooltip(
+                `<div>
+                     2021-12-17 20:46:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b19b18a203df08b66843b844a92d590d = L.circleMarker(
+                [54.640073, 14.339787],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_cd0fd03a88ebeaa8b445fc30dc64340d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07eacb609fd7d63ea839e80446c04588 = $(`<div id="html_07eacb609fd7d63ea839e80446c04588" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:46:12<br>Lat/Lon: (54.640073, 14.339787)<br>SOG: 6.10 kn</div>`)[0];
+                popup_cd0fd03a88ebeaa8b445fc30dc64340d.setContent(html_07eacb609fd7d63ea839e80446c04588);
+            
+        
+
+        circle_marker_b19b18a203df08b66843b844a92d590d.bindPopup(popup_cd0fd03a88ebeaa8b445fc30dc64340d)
+        ;
+
+        
+    
+    
+            circle_marker_b19b18a203df08b66843b844a92d590d.bindTooltip(
+                `<div>
+                     2021-12-17 20:46:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3bca39f6be58f1ffe9056657245894ee = L.circleMarker(
+                [54.639933, 14.340207],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_b1e19c6e6045429d71ba2cb8a0b93d85 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f16f12ee7780e6a7374d151a4014464 = $(`<div id="html_3f16f12ee7780e6a7374d151a4014464" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:46:22<br>Lat/Lon: (54.639933, 14.340207)<br>SOG: 6.00 kn</div>`)[0];
+                popup_b1e19c6e6045429d71ba2cb8a0b93d85.setContent(html_3f16f12ee7780e6a7374d151a4014464);
+            
+        
+
+        circle_marker_3bca39f6be58f1ffe9056657245894ee.bindPopup(popup_b1e19c6e6045429d71ba2cb8a0b93d85)
+        ;
+
+        
+    
+    
+            circle_marker_3bca39f6be58f1ffe9056657245894ee.bindTooltip(
+                `<div>
+                     2021-12-17 20:46:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f8d597cbc08b03097887487b87ececf7 = L.circleMarker(
+                [54.639747, 14.34062],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_e142b11aab84e63f42f7e83a1b574f17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f62f69fbb9c67bdcc43f24d2e6bb4cdf = $(`<div id="html_f62f69fbb9c67bdcc43f24d2e6bb4cdf" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:46:34<br>Lat/Lon: (54.639747, 14.340620)<br>SOG: 5.80 kn</div>`)[0];
+                popup_e142b11aab84e63f42f7e83a1b574f17.setContent(html_f62f69fbb9c67bdcc43f24d2e6bb4cdf);
+            
+        
+
+        circle_marker_f8d597cbc08b03097887487b87ececf7.bindPopup(popup_e142b11aab84e63f42f7e83a1b574f17)
+        ;
+
+        
+    
+    
+            circle_marker_f8d597cbc08b03097887487b87ececf7.bindTooltip(
+                `<div>
+                     2021-12-17 20:46:34
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7f5566020d2b4a5d3a3c033aef5897c0 = L.circleMarker(
+                [54.639543, 14.340965],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_8415eaf314c1707a7009694a744591cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_998ba59721eb158122079b9e18b3cb90 = $(`<div id="html_998ba59721eb158122079b9e18b3cb90" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:46:43<br>Lat/Lon: (54.639543, 14.340965)<br>SOG: 6.30 kn</div>`)[0];
+                popup_8415eaf314c1707a7009694a744591cc.setContent(html_998ba59721eb158122079b9e18b3cb90);
+            
+        
+
+        circle_marker_7f5566020d2b4a5d3a3c033aef5897c0.bindPopup(popup_8415eaf314c1707a7009694a744591cc)
+        ;
+
+        
+    
+    
+            circle_marker_7f5566020d2b4a5d3a3c033aef5897c0.bindTooltip(
+                `<div>
+                     2021-12-17 20:46:43
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_73856a72eb42b5739c49df37b39fe5f8 = L.circleMarker(
+                [54.63938, 14.341223],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_6dc0079d2071c48245a734c23afc02d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5de4901e47d1674099fdec563c892c8b = $(`<div id="html_5de4901e47d1674099fdec563c892c8b" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:46:52<br>Lat/Lon: (54.639380, 14.341223)<br>SOG: 6.60 kn</div>`)[0];
+                popup_6dc0079d2071c48245a734c23afc02d6.setContent(html_5de4901e47d1674099fdec563c892c8b);
+            
+        
+
+        circle_marker_73856a72eb42b5739c49df37b39fe5f8.bindPopup(popup_6dc0079d2071c48245a734c23afc02d6)
+        ;
+
+        
+    
+    
+            circle_marker_73856a72eb42b5739c49df37b39fe5f8.bindTooltip(
+                `<div>
+                     2021-12-17 20:46:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_69e3e37cd204f045b042b34e54a1a511 = L.circleMarker(
+                [54.639113, 14.34159],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_18822bb4f1d0df7b27d12d8476eabebb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a62890d60d97846d3c6a0193bb5bf35a = $(`<div id="html_a62890d60d97846d3c6a0193bb5bf35a" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:47:03<br>Lat/Lon: (54.639113, 14.341590)<br>SOG: 5.90 kn</div>`)[0];
+                popup_18822bb4f1d0df7b27d12d8476eabebb.setContent(html_a62890d60d97846d3c6a0193bb5bf35a);
+            
+        
+
+        circle_marker_69e3e37cd204f045b042b34e54a1a511.bindPopup(popup_18822bb4f1d0df7b27d12d8476eabebb)
+        ;
+
+        
+    
+    
+            circle_marker_69e3e37cd204f045b042b34e54a1a511.bindTooltip(
+                `<div>
+                     2021-12-17 20:47:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f460a30a8aa8d671239db7a089366080 = L.circleMarker(
+                [54.63891, 14.341862],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_1b1858ecafe15bac61174084b8312825 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f78803d14e4bf2b21c11e1388f548526 = $(`<div id="html_f78803d14e4bf2b21c11e1388f548526" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:47:13<br>Lat/Lon: (54.638910, 14.341862)<br>SOG: 6.30 kn</div>`)[0];
+                popup_1b1858ecafe15bac61174084b8312825.setContent(html_f78803d14e4bf2b21c11e1388f548526);
+            
+        
+
+        circle_marker_f460a30a8aa8d671239db7a089366080.bindPopup(popup_1b1858ecafe15bac61174084b8312825)
+        ;
+
+        
+    
+    
+            circle_marker_f460a30a8aa8d671239db7a089366080.bindTooltip(
+                `<div>
+                     2021-12-17 20:47:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e70e74a9dc3d69527946fe5813a2626a = L.circleMarker(
+                [54.638673, 14.342128],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_8dfc2d6b34d47bec867d39fb474b2449 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11541ac68e571f490b173510d79a93b4 = $(`<div id="html_11541ac68e571f490b173510d79a93b4" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:47:22<br>Lat/Lon: (54.638673, 14.342128)<br>SOG: 6.70 kn</div>`)[0];
+                popup_8dfc2d6b34d47bec867d39fb474b2449.setContent(html_11541ac68e571f490b173510d79a93b4);
+            
+        
+
+        circle_marker_e70e74a9dc3d69527946fe5813a2626a.bindPopup(popup_8dfc2d6b34d47bec867d39fb474b2449)
+        ;
+
+        
+    
+    
+            circle_marker_e70e74a9dc3d69527946fe5813a2626a.bindTooltip(
+                `<div>
+                     2021-12-17 20:47:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1c80b47f81972da2dd5dad0499b8f187 = L.circleMarker(
+                [54.638397, 14.342358],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_1b6408af38561f77767518b5bf3f592c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75c0ee0ec6d568fbbc62417f165d9b2a = $(`<div id="html_75c0ee0ec6d568fbbc62417f165d9b2a" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:47:34<br>Lat/Lon: (54.638397, 14.342358)<br>SOG: 6.20 kn</div>`)[0];
+                popup_1b6408af38561f77767518b5bf3f592c.setContent(html_75c0ee0ec6d568fbbc62417f165d9b2a);
+            
+        
+
+        circle_marker_1c80b47f81972da2dd5dad0499b8f187.bindPopup(popup_1b6408af38561f77767518b5bf3f592c)
+        ;
+
+        
+    
+    
+            circle_marker_1c80b47f81972da2dd5dad0499b8f187.bindTooltip(
+                `<div>
+                     2021-12-17 20:47:34
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8c2768b447f981512c20aaf9af995e65 = L.circleMarker(
+                [54.63816, 14.342505],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_97fc9bb44cc98d40fe5d87bfb509c178 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_753a962a37796d091023e32392596b0e = $(`<div id="html_753a962a37796d091023e32392596b0e" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:47:42<br>Lat/Lon: (54.638160, 14.342505)<br>SOG: 6.90 kn</div>`)[0];
+                popup_97fc9bb44cc98d40fe5d87bfb509c178.setContent(html_753a962a37796d091023e32392596b0e);
+            
+        
+
+        circle_marker_8c2768b447f981512c20aaf9af995e65.bindPopup(popup_97fc9bb44cc98d40fe5d87bfb509c178)
+        ;
+
+        
+    
+    
+            circle_marker_8c2768b447f981512c20aaf9af995e65.bindTooltip(
+                `<div>
+                     2021-12-17 20:47:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_210af511050c2541ab1c74bf07f1488c = L.circleMarker(
+                [54.637877, 14.342668],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_a3baebf078c4e2f8fa0121bf5872f040 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48280d2bf757bc6c4ae1d0025ef296ed = $(`<div id="html_48280d2bf757bc6c4ae1d0025ef296ed" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:47:53<br>Lat/Lon: (54.637877, 14.342668)<br>SOG: 5.90 kn</div>`)[0];
+                popup_a3baebf078c4e2f8fa0121bf5872f040.setContent(html_48280d2bf757bc6c4ae1d0025ef296ed);
+            
+        
+
+        circle_marker_210af511050c2541ab1c74bf07f1488c.bindPopup(popup_a3baebf078c4e2f8fa0121bf5872f040)
+        ;
+
+        
+    
+    
+            circle_marker_210af511050c2541ab1c74bf07f1488c.bindTooltip(
+                `<div>
+                     2021-12-17 20:47:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_877879b45a641c675f716ea4ef90ac9c = L.circleMarker(
+                [54.637657, 14.342898],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_4698a0f86eec76c698d3a97a9fa5215d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c70e3750d907e53f16ab86d3d77c1ff = $(`<div id="html_8c70e3750d907e53f16ab86d3d77c1ff" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:48:03<br>Lat/Lon: (54.637657, 14.342898)<br>SOG: 5.70 kn</div>`)[0];
+                popup_4698a0f86eec76c698d3a97a9fa5215d.setContent(html_8c70e3750d907e53f16ab86d3d77c1ff);
+            
+        
+
+        circle_marker_877879b45a641c675f716ea4ef90ac9c.bindPopup(popup_4698a0f86eec76c698d3a97a9fa5215d)
+        ;
+
+        
+    
+    
+            circle_marker_877879b45a641c675f716ea4ef90ac9c.bindTooltip(
+                `<div>
+                     2021-12-17 20:48:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d663a93eb6092e587ae0d4b7faaddfdd = L.circleMarker(
+                [54.637453, 14.343123],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_3642f72db68aca745d9da738e103a6e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f624f4e6339be15d92144c29956eeced = $(`<div id="html_f624f4e6339be15d92144c29956eeced" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:48:13<br>Lat/Lon: (54.637453, 14.343123)<br>SOG: 5.50 kn</div>`)[0];
+                popup_3642f72db68aca745d9da738e103a6e8.setContent(html_f624f4e6339be15d92144c29956eeced);
+            
+        
+
+        circle_marker_d663a93eb6092e587ae0d4b7faaddfdd.bindPopup(popup_3642f72db68aca745d9da738e103a6e8)
+        ;
+
+        
+    
+    
+            circle_marker_d663a93eb6092e587ae0d4b7faaddfdd.bindTooltip(
+                `<div>
+                     2021-12-17 20:48:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_262015f5e4a17dc9c29e823b21818bb3 = L.circleMarker(
+                [54.63725, 14.343417],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_1bd26d9953f81d5df2896e77c77ec3d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b3a782f72df494adc3327cb3d94b63b = $(`<div id="html_8b3a782f72df494adc3327cb3d94b63b" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:48:23<br>Lat/Lon: (54.637250, 14.343417)<br>SOG: 6.00 kn</div>`)[0];
+                popup_1bd26d9953f81d5df2896e77c77ec3d5.setContent(html_8b3a782f72df494adc3327cb3d94b63b);
+            
+        
+
+        circle_marker_262015f5e4a17dc9c29e823b21818bb3.bindPopup(popup_1bd26d9953f81d5df2896e77c77ec3d5)
+        ;
+
+        
+    
+    
+            circle_marker_262015f5e4a17dc9c29e823b21818bb3.bindTooltip(
+                `<div>
+                     2021-12-17 20:48:23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e578e28ad1eef3b1d64c0e238003c6aa = L.circleMarker(
+                [54.637013, 14.343737],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_05956b9bdd3fc0d7fe9b39662a8908c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91604091e1cf2e0e10eb51b65657b38e = $(`<div id="html_91604091e1cf2e0e10eb51b65657b38e" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:48:34<br>Lat/Lon: (54.637013, 14.343737)<br>SOG: 5.60 kn</div>`)[0];
+                popup_05956b9bdd3fc0d7fe9b39662a8908c1.setContent(html_91604091e1cf2e0e10eb51b65657b38e);
+            
+        
+
+        circle_marker_e578e28ad1eef3b1d64c0e238003c6aa.bindPopup(popup_05956b9bdd3fc0d7fe9b39662a8908c1)
+        ;
+
+        
+    
+    
+            circle_marker_e578e28ad1eef3b1d64c0e238003c6aa.bindTooltip(
+                `<div>
+                     2021-12-17 20:48:34
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ed2436a02b949b5edb23f978a43f4c70 = L.circleMarker(
+                [54.636817, 14.344015],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_44237383b0aab7d0adb3f7a8d09c0a01 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_768403c8872dfcee8d4ba551c36fd4c2 = $(`<div id="html_768403c8872dfcee8d4ba551c36fd4c2" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:48:42<br>Lat/Lon: (54.636817, 14.344015)<br>SOG: 6.30 kn</div>`)[0];
+                popup_44237383b0aab7d0adb3f7a8d09c0a01.setContent(html_768403c8872dfcee8d4ba551c36fd4c2);
+            
+        
+
+        circle_marker_ed2436a02b949b5edb23f978a43f4c70.bindPopup(popup_44237383b0aab7d0adb3f7a8d09c0a01)
+        ;
+
+        
+    
+    
+            circle_marker_ed2436a02b949b5edb23f978a43f4c70.bindTooltip(
+                `<div>
+                     2021-12-17 20:48:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3b040800187bd8e4528bdf30c1a7d9c1 = L.circleMarker(
+                [54.636557, 14.344327],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_f318bb42ded0e949ae4ec78d07dfda94 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4310b7d3bc82e9cee9f17f85762567ce = $(`<div id="html_4310b7d3bc82e9cee9f17f85762567ce" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:48:53<br>Lat/Lon: (54.636557, 14.344327)<br>SOG: 6.40 kn</div>`)[0];
+                popup_f318bb42ded0e949ae4ec78d07dfda94.setContent(html_4310b7d3bc82e9cee9f17f85762567ce);
+            
+        
+
+        circle_marker_3b040800187bd8e4528bdf30c1a7d9c1.bindPopup(popup_f318bb42ded0e949ae4ec78d07dfda94)
+        ;
+
+        
+    
+    
+            circle_marker_3b040800187bd8e4528bdf30c1a7d9c1.bindTooltip(
+                `<div>
+                     2021-12-17 20:48:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9faa104e252082cb1c6079fcd33ba5bc = L.circleMarker(
+                [54.63607, 14.344738],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_54b29bbe00de38790d9fc842f5014efa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3b33b2c662ad7ec7518e4ed2cbe9b72 = $(`<div id="html_b3b33b2c662ad7ec7518e4ed2cbe9b72" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:49:13<br>Lat/Lon: (54.636070, 14.344738)<br>SOG: 6.50 kn</div>`)[0];
+                popup_54b29bbe00de38790d9fc842f5014efa.setContent(html_b3b33b2c662ad7ec7518e4ed2cbe9b72);
+            
+        
+
+        circle_marker_9faa104e252082cb1c6079fcd33ba5bc.bindPopup(popup_54b29bbe00de38790d9fc842f5014efa)
+        ;
+
+        
+    
+    
+            circle_marker_9faa104e252082cb1c6079fcd33ba5bc.bindTooltip(
+                `<div>
+                     2021-12-17 20:49:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b518a66e5d0bcac033311c2292ad44e8 = L.circleMarker(
+                [54.635817, 14.344932],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_3f86bb74a7eda3476d380452652b7509 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b71d48219312789b978bbfd90af85eb1 = $(`<div id="html_b71d48219312789b978bbfd90af85eb1" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:49:22<br>Lat/Lon: (54.635817, 14.344932)<br>SOG: 6.40 kn</div>`)[0];
+                popup_3f86bb74a7eda3476d380452652b7509.setContent(html_b71d48219312789b978bbfd90af85eb1);
+            
+        
+
+        circle_marker_b518a66e5d0bcac033311c2292ad44e8.bindPopup(popup_3f86bb74a7eda3476d380452652b7509)
+        ;
+
+        
+    
+    
+            circle_marker_b518a66e5d0bcac033311c2292ad44e8.bindTooltip(
+                `<div>
+                     2021-12-17 20:49:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e87e950d499ea51922572a0edee8165a = L.circleMarker(
+                [54.635297, 14.34531],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_72825fc206ba41187ee8875de8305232 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_908b0998f1269702364e5e67353290a2 = $(`<div id="html_908b0998f1269702364e5e67353290a2" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:49:42<br>Lat/Lon: (54.635297, 14.345310)<br>SOG: 6.80 kn</div>`)[0];
+                popup_72825fc206ba41187ee8875de8305232.setContent(html_908b0998f1269702364e5e67353290a2);
+            
+        
+
+        circle_marker_e87e950d499ea51922572a0edee8165a.bindPopup(popup_72825fc206ba41187ee8875de8305232)
+        ;
+
+        
+    
+    
+            circle_marker_e87e950d499ea51922572a0edee8165a.bindTooltip(
+                `<div>
+                     2021-12-17 20:49:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_849da36212f8e93ff87adf31da82146e = L.circleMarker(
+                [54.63475, 14.345683],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_c460a7c729c1647c4cf5a8a702e5b668 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18d0a0ea7ab543161843ff50f15fea47 = $(`<div id="html_18d0a0ea7ab543161843ff50f15fea47" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:50:03<br>Lat/Lon: (54.634750, 14.345683)<br>SOG: 6.50 kn</div>`)[0];
+                popup_c460a7c729c1647c4cf5a8a702e5b668.setContent(html_18d0a0ea7ab543161843ff50f15fea47);
+            
+        
+
+        circle_marker_849da36212f8e93ff87adf31da82146e.bindPopup(popup_c460a7c729c1647c4cf5a8a702e5b668)
+        ;
+
+        
+    
+    
+            circle_marker_849da36212f8e93ff87adf31da82146e.bindTooltip(
+                `<div>
+                     2021-12-17 20:50:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8742fe1fe690123c5a9389d99c3fc8b5 = L.circleMarker(
+                [54.634523, 14.34586],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_b9a19704d2986c2be62a0d4beda0303c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f18941f48a963638ebe28709456de5a = $(`<div id="html_6f18941f48a963638ebe28709456de5a" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:50:13<br>Lat/Lon: (54.634523, 14.345860)<br>SOG: 6.70 kn</div>`)[0];
+                popup_b9a19704d2986c2be62a0d4beda0303c.setContent(html_6f18941f48a963638ebe28709456de5a);
+            
+        
+
+        circle_marker_8742fe1fe690123c5a9389d99c3fc8b5.bindPopup(popup_b9a19704d2986c2be62a0d4beda0303c)
+        ;
+
+        
+    
+    
+            circle_marker_8742fe1fe690123c5a9389d99c3fc8b5.bindTooltip(
+                `<div>
+                     2021-12-17 20:50:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_458ce78a6d4459a3274c2a3bdabb7759 = L.circleMarker(
+                [54.634017, 14.346193],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_e7c8501d6f673705a023b9603b78d7a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34aa0b8cf1b9060421917b1f19d454e1 = $(`<div id="html_34aa0b8cf1b9060421917b1f19d454e1" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:50:33<br>Lat/Lon: (54.634017, 14.346193)<br>SOG: 6.40 kn</div>`)[0];
+                popup_e7c8501d6f673705a023b9603b78d7a9.setContent(html_34aa0b8cf1b9060421917b1f19d454e1);
+            
+        
+
+        circle_marker_458ce78a6d4459a3274c2a3bdabb7759.bindPopup(popup_e7c8501d6f673705a023b9603b78d7a9)
+        ;
+
+        
+    
+    
+            circle_marker_458ce78a6d4459a3274c2a3bdabb7759.bindTooltip(
+                `<div>
+                     2021-12-17 20:50:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1fd173fa07b9dc9420ee556be5c3f350 = L.circleMarker(
+                [54.63383, 14.34641],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_c8d18453d2eb2fae4a07917c9bf7a401 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cee1e32fa6952e27ba6f76d3d33962b6 = $(`<div id="html_cee1e32fa6952e27ba6f76d3d33962b6" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:50:42<br>Lat/Lon: (54.633830, 14.346410)<br>SOG: 6.30 kn</div>`)[0];
+                popup_c8d18453d2eb2fae4a07917c9bf7a401.setContent(html_cee1e32fa6952e27ba6f76d3d33962b6);
+            
+        
+
+        circle_marker_1fd173fa07b9dc9420ee556be5c3f350.bindPopup(popup_c8d18453d2eb2fae4a07917c9bf7a401)
+        ;
+
+        
+    
+    
+            circle_marker_1fd173fa07b9dc9420ee556be5c3f350.bindTooltip(
+                `<div>
+                     2021-12-17 20:50:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f27a97c5a969dcd89c1d5471b727e6c7 = L.circleMarker(
+                [54.633553, 14.346613],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_f129db32bb20374540adfa6a55012205 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee91d212a49c6fa04fe1de3713f322d6 = $(`<div id="html_ee91d212a49c6fa04fe1de3713f322d6" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:50:53<br>Lat/Lon: (54.633553, 14.346613)<br>SOG: 6.20 kn</div>`)[0];
+                popup_f129db32bb20374540adfa6a55012205.setContent(html_ee91d212a49c6fa04fe1de3713f322d6);
+            
+        
+
+        circle_marker_f27a97c5a969dcd89c1d5471b727e6c7.bindPopup(popup_f129db32bb20374540adfa6a55012205)
+        ;
+
+        
+    
+    
+            circle_marker_f27a97c5a969dcd89c1d5471b727e6c7.bindTooltip(
+                `<div>
+                     2021-12-17 20:50:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e5104be6caba9cb368fd169534f1b3d1 = L.circleMarker(
+                [54.63331, 14.346835],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_4ef1a38946481c32487d2ad61d7d8c19 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_880a31ca740ea299b089f80da694732d = $(`<div id="html_880a31ca740ea299b089f80da694732d" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:51:03<br>Lat/Lon: (54.633310, 14.346835)<br>SOG: 7.20 kn</div>`)[0];
+                popup_4ef1a38946481c32487d2ad61d7d8c19.setContent(html_880a31ca740ea299b089f80da694732d);
+            
+        
+
+        circle_marker_e5104be6caba9cb368fd169534f1b3d1.bindPopup(popup_4ef1a38946481c32487d2ad61d7d8c19)
+        ;
+
+        
+    
+    
+            circle_marker_e5104be6caba9cb368fd169534f1b3d1.bindTooltip(
+                `<div>
+                     2021-12-17 20:51:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3ac22c4fa03184295409738add733f86 = L.circleMarker(
+                [54.633067, 14.34699],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_90e8706dcb7be2f0e1adbac47917b022 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_caa8b68e73effaeb86cd5ee8827006dc = $(`<div id="html_caa8b68e73effaeb86cd5ee8827006dc" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:51:13<br>Lat/Lon: (54.633067, 14.346990)<br>SOG: 6.20 kn</div>`)[0];
+                popup_90e8706dcb7be2f0e1adbac47917b022.setContent(html_caa8b68e73effaeb86cd5ee8827006dc);
+            
+        
+
+        circle_marker_3ac22c4fa03184295409738add733f86.bindPopup(popup_90e8706dcb7be2f0e1adbac47917b022)
+        ;
+
+        
+    
+    
+            circle_marker_3ac22c4fa03184295409738add733f86.bindTooltip(
+                `<div>
+                     2021-12-17 20:51:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7306219310e783d0aba1f0b68d8fb62d = L.circleMarker(
+                [54.632823, 14.347187],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_7c662d8b2c4d4caf00cd5802a754be9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98a4636ccad3892aac281f1045b8fbee = $(`<div id="html_98a4636ccad3892aac281f1045b8fbee" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:51:22<br>Lat/Lon: (54.632823, 14.347187)<br>SOG: 6.00 kn</div>`)[0];
+                popup_7c662d8b2c4d4caf00cd5802a754be9d.setContent(html_98a4636ccad3892aac281f1045b8fbee);
+            
+        
+
+        circle_marker_7306219310e783d0aba1f0b68d8fb62d.bindPopup(popup_7c662d8b2c4d4caf00cd5802a754be9d)
+        ;
+
+        
+    
+    
+            circle_marker_7306219310e783d0aba1f0b68d8fb62d.bindTooltip(
+                `<div>
+                     2021-12-17 20:51:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7346458869dad4c20a181b3b89b7169f = L.circleMarker(
+                [54.632547, 14.347382],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_9192553ed03aefdafd0c2ea682e133e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2c874a1c3c3246dacea8ef6e7d1ed78 = $(`<div id="html_c2c874a1c3c3246dacea8ef6e7d1ed78" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:51:33<br>Lat/Lon: (54.632547, 14.347382)<br>SOG: 6.60 kn</div>`)[0];
+                popup_9192553ed03aefdafd0c2ea682e133e8.setContent(html_c2c874a1c3c3246dacea8ef6e7d1ed78);
+            
+        
+
+        circle_marker_7346458869dad4c20a181b3b89b7169f.bindPopup(popup_9192553ed03aefdafd0c2ea682e133e8)
+        ;
+
+        
+    
+    
+            circle_marker_7346458869dad4c20a181b3b89b7169f.bindTooltip(
+                `<div>
+                     2021-12-17 20:51:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_14f8a85758aab35ae61a780c28b8d0a9 = L.circleMarker(
+                [54.632327, 14.347522],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_e39a7ef97a13ea7e6149a880fc2b4536 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a8ef6e6be52104d8e0fbb76347d2a9b = $(`<div id="html_8a8ef6e6be52104d8e0fbb76347d2a9b" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:51:42<br>Lat/Lon: (54.632327, 14.347522)<br>SOG: 6.00 kn</div>`)[0];
+                popup_e39a7ef97a13ea7e6149a880fc2b4536.setContent(html_8a8ef6e6be52104d8e0fbb76347d2a9b);
+            
+        
+
+        circle_marker_14f8a85758aab35ae61a780c28b8d0a9.bindPopup(popup_e39a7ef97a13ea7e6149a880fc2b4536)
+        ;
+
+        
+    
+    
+            circle_marker_14f8a85758aab35ae61a780c28b8d0a9.bindTooltip(
+                `<div>
+                     2021-12-17 20:51:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b9b98b23f73bbc6debd7b74f53dd879a = L.circleMarker(
+                [54.632327, 14.347522],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_2f6bd2133d3ec9bd762959211f07d474 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9997c80cbf55b16fb1c3e936b8d47d34 = $(`<div id="html_9997c80cbf55b16fb1c3e936b8d47d34" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:51:43<br>Lat/Lon: (54.632327, 14.347522)<br>SOG: 6.00 kn</div>`)[0];
+                popup_2f6bd2133d3ec9bd762959211f07d474.setContent(html_9997c80cbf55b16fb1c3e936b8d47d34);
+            
+        
+
+        circle_marker_b9b98b23f73bbc6debd7b74f53dd879a.bindPopup(popup_2f6bd2133d3ec9bd762959211f07d474)
+        ;
+
+        
+    
+    
+            circle_marker_b9b98b23f73bbc6debd7b74f53dd879a.bindTooltip(
+                `<div>
+                     2021-12-17 20:51:43
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4b79ca5002b46846d0acda2b010f1297 = L.circleMarker(
+                [54.632067, 14.347725],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_f7d7d19bcd036aa96048d766e51a5fbd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49cb55090e201afa024731c4f30cbbcd = $(`<div id="html_49cb55090e201afa024731c4f30cbbcd" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:51:53<br>Lat/Lon: (54.632067, 14.347725)<br>SOG: 6.30 kn</div>`)[0];
+                popup_f7d7d19bcd036aa96048d766e51a5fbd.setContent(html_49cb55090e201afa024731c4f30cbbcd);
+            
+        
+
+        circle_marker_4b79ca5002b46846d0acda2b010f1297.bindPopup(popup_f7d7d19bcd036aa96048d766e51a5fbd)
+        ;
+
+        
+    
+    
+            circle_marker_4b79ca5002b46846d0acda2b010f1297.bindTooltip(
+                `<div>
+                     2021-12-17 20:51:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4a7de3d926993b13558e80eeb2445222 = L.circleMarker(
+                [54.631813, 14.347922],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_9f334800834e9b06d4dda5ada011fb10 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aeb67e1405a675fd3df98d02c074f0c7 = $(`<div id="html_aeb67e1405a675fd3df98d02c074f0c7" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:52:03<br>Lat/Lon: (54.631813, 14.347922)<br>SOG: 6.40 kn</div>`)[0];
+                popup_9f334800834e9b06d4dda5ada011fb10.setContent(html_aeb67e1405a675fd3df98d02c074f0c7);
+            
+        
+
+        circle_marker_4a7de3d926993b13558e80eeb2445222.bindPopup(popup_9f334800834e9b06d4dda5ada011fb10)
+        ;
+
+        
+    
+    
+            circle_marker_4a7de3d926993b13558e80eeb2445222.bindTooltip(
+                `<div>
+                     2021-12-17 20:52:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e2325a024cdb40ed7fcb711e1607523d = L.circleMarker(
+                [54.631577, 14.348102],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_8223ddb874fb6e85beceb46e06cbbf9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83204bd088c3835e88d6c8c513a367d9 = $(`<div id="html_83204bd088c3835e88d6c8c513a367d9" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:52:13<br>Lat/Lon: (54.631577, 14.348102)<br>SOG: 6.40 kn</div>`)[0];
+                popup_8223ddb874fb6e85beceb46e06cbbf9b.setContent(html_83204bd088c3835e88d6c8c513a367d9);
+            
+        
+
+        circle_marker_e2325a024cdb40ed7fcb711e1607523d.bindPopup(popup_8223ddb874fb6e85beceb46e06cbbf9b)
+        ;
+
+        
+    
+    
+            circle_marker_e2325a024cdb40ed7fcb711e1607523d.bindTooltip(
+                `<div>
+                     2021-12-17 20:52:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4049e2fdba45bfb1e0be58f8753b0b11 = L.circleMarker(
+                [54.631317, 14.348285],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_eef3782089ab9d71e1032986fa475aa1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b38d2995c06ebfcd4dba1fcd8085ed71 = $(`<div id="html_b38d2995c06ebfcd4dba1fcd8085ed71" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:52:22<br>Lat/Lon: (54.631317, 14.348285)<br>SOG: 6.10 kn</div>`)[0];
+                popup_eef3782089ab9d71e1032986fa475aa1.setContent(html_b38d2995c06ebfcd4dba1fcd8085ed71);
+            
+        
+
+        circle_marker_4049e2fdba45bfb1e0be58f8753b0b11.bindPopup(popup_eef3782089ab9d71e1032986fa475aa1)
+        ;
+
+        
+    
+    
+            circle_marker_4049e2fdba45bfb1e0be58f8753b0b11.bindTooltip(
+                `<div>
+                     2021-12-17 20:52:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_772590df356ffb6cbc097cd18088c3b5 = L.circleMarker(
+                [54.631023, 14.348505],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_b0a48b10ef328fa4bb388ced14ed7d5a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7bd576a91b6851b0a23998d14230b447 = $(`<div id="html_7bd576a91b6851b0a23998d14230b447" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:52:33<br>Lat/Lon: (54.631023, 14.348505)<br>SOG: 6.50 kn</div>`)[0];
+                popup_b0a48b10ef328fa4bb388ced14ed7d5a.setContent(html_7bd576a91b6851b0a23998d14230b447);
+            
+        
+
+        circle_marker_772590df356ffb6cbc097cd18088c3b5.bindPopup(popup_b0a48b10ef328fa4bb388ced14ed7d5a)
+        ;
+
+        
+    
+    
+            circle_marker_772590df356ffb6cbc097cd18088c3b5.bindTooltip(
+                `<div>
+                     2021-12-17 20:52:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_20e59c03ddf712988cf0f828e1634744 = L.circleMarker(
+                [54.630753, 14.34865],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_6ce1e257877b5b21f38465afda232ef0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df1d83d5ee64e1b923dd3b7e943f2ce1 = $(`<div id="html_df1d83d5ee64e1b923dd3b7e943f2ce1" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:52:42<br>Lat/Lon: (54.630753, 14.348650)<br>SOG: 6.80 kn</div>`)[0];
+                popup_6ce1e257877b5b21f38465afda232ef0.setContent(html_df1d83d5ee64e1b923dd3b7e943f2ce1);
+            
+        
+
+        circle_marker_20e59c03ddf712988cf0f828e1634744.bindPopup(popup_6ce1e257877b5b21f38465afda232ef0)
+        ;
+
+        
+    
+    
+            circle_marker_20e59c03ddf712988cf0f828e1634744.bindTooltip(
+                `<div>
+                     2021-12-17 20:52:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6ed7d075fe65d81c8cc8b7f621a242ab = L.circleMarker(
+                [54.630453, 14.348788],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_dffb6ffbbfae0cea479c4131ca4654e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c71676de8c2f2bb48efab63c1c4359c7 = $(`<div id="html_c71676de8c2f2bb48efab63c1c4359c7" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:52:53<br>Lat/Lon: (54.630453, 14.348788)<br>SOG: 6.50 kn</div>`)[0];
+                popup_dffb6ffbbfae0cea479c4131ca4654e3.setContent(html_c71676de8c2f2bb48efab63c1c4359c7);
+            
+        
+
+        circle_marker_6ed7d075fe65d81c8cc8b7f621a242ab.bindPopup(popup_dffb6ffbbfae0cea479c4131ca4654e3)
+        ;
+
+        
+    
+    
+            circle_marker_6ed7d075fe65d81c8cc8b7f621a242ab.bindTooltip(
+                `<div>
+                     2021-12-17 20:52:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1ecb6c4664cb0238f006be7ebca7571f = L.circleMarker(
+                [54.6302, 14.348898],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_45808d68e145a4809b20ac234ddcf4bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d21056da25bc47f332dd4bde9039e95d = $(`<div id="html_d21056da25bc47f332dd4bde9039e95d" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:53:03<br>Lat/Lon: (54.630200, 14.348898)<br>SOG: 5.70 kn</div>`)[0];
+                popup_45808d68e145a4809b20ac234ddcf4bc.setContent(html_d21056da25bc47f332dd4bde9039e95d);
+            
+        
+
+        circle_marker_1ecb6c4664cb0238f006be7ebca7571f.bindPopup(popup_45808d68e145a4809b20ac234ddcf4bc)
+        ;
+
+        
+    
+    
+            circle_marker_1ecb6c4664cb0238f006be7ebca7571f.bindTooltip(
+                `<div>
+                     2021-12-17 20:53:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_18056680fb40b54a554a975ad3f623a8 = L.circleMarker(
+                [54.62999, 14.349012],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_4bda0a1b44b7d3d292b7db2c6461f9ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09f0f7f8a9a6d719a4a2ce2e8dde779d = $(`<div id="html_09f0f7f8a9a6d719a4a2ce2e8dde779d" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:53:12<br>Lat/Lon: (54.629990, 14.349012)<br>SOG: 5.70 kn</div>`)[0];
+                popup_4bda0a1b44b7d3d292b7db2c6461f9ac.setContent(html_09f0f7f8a9a6d719a4a2ce2e8dde779d);
+            
+        
+
+        circle_marker_18056680fb40b54a554a975ad3f623a8.bindPopup(popup_4bda0a1b44b7d3d292b7db2c6461f9ac)
+        ;
+
+        
+    
+    
+            circle_marker_18056680fb40b54a554a975ad3f623a8.bindTooltip(
+                `<div>
+                     2021-12-17 20:53:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3e82c157a580d7b7cb7b4427951ebaec = L.circleMarker(
+                [54.62977, 14.349175],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_725beaaf2a76af445fab32909ab3dc98 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9686ed9a956fb63408edb889f7d9c3dd = $(`<div id="html_9686ed9a956fb63408edb889f7d9c3dd" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:53:22<br>Lat/Lon: (54.629770, 14.349175)<br>SOG: 5.00 kn</div>`)[0];
+                popup_725beaaf2a76af445fab32909ab3dc98.setContent(html_9686ed9a956fb63408edb889f7d9c3dd);
+            
+        
+
+        circle_marker_3e82c157a580d7b7cb7b4427951ebaec.bindPopup(popup_725beaaf2a76af445fab32909ab3dc98)
+        ;
+
+        
+    
+    
+            circle_marker_3e82c157a580d7b7cb7b4427951ebaec.bindTooltip(
+                `<div>
+                     2021-12-17 20:53:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ff6f6b85ede46fb8138363cc03322d25 = L.circleMarker(
+                [54.62955, 14.349322],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_a36fe27857cab694867b27c7262dc593 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad8744e9e7cefa0b220d2516908609fc = $(`<div id="html_ad8744e9e7cefa0b220d2516908609fc" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:53:32<br>Lat/Lon: (54.629550, 14.349322)<br>SOG: 5.40 kn</div>`)[0];
+                popup_a36fe27857cab694867b27c7262dc593.setContent(html_ad8744e9e7cefa0b220d2516908609fc);
+            
+        
+
+        circle_marker_ff6f6b85ede46fb8138363cc03322d25.bindPopup(popup_a36fe27857cab694867b27c7262dc593)
+        ;
+
+        
+    
+    
+            circle_marker_ff6f6b85ede46fb8138363cc03322d25.bindTooltip(
+                `<div>
+                     2021-12-17 20:53:32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_367360eee5c6166b9d817eb5f982cbf6 = L.circleMarker(
+                [54.629357, 14.34942],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_88f5046042f271ea7ca304de7e14538e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_512bd4ec4f7f29e016c5fafadfe099fe = $(`<div id="html_512bd4ec4f7f29e016c5fafadfe099fe" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:53:42<br>Lat/Lon: (54.629357, 14.349420)<br>SOG: 5.10 kn</div>`)[0];
+                popup_88f5046042f271ea7ca304de7e14538e.setContent(html_512bd4ec4f7f29e016c5fafadfe099fe);
+            
+        
+
+        circle_marker_367360eee5c6166b9d817eb5f982cbf6.bindPopup(popup_88f5046042f271ea7ca304de7e14538e)
+        ;
+
+        
+    
+    
+            circle_marker_367360eee5c6166b9d817eb5f982cbf6.bindTooltip(
+                `<div>
+                     2021-12-17 20:53:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f53c72acd146a31860911e7e52d1a1a8 = L.circleMarker(
+                [54.629093, 14.34958],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_df609e70b0b1b18257c34308e45d9218 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_087f616c50552a115322a915ad99e3c1 = $(`<div id="html_087f616c50552a115322a915ad99e3c1" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:53:53<br>Lat/Lon: (54.629093, 14.349580)<br>SOG: 5.00 kn</div>`)[0];
+                popup_df609e70b0b1b18257c34308e45d9218.setContent(html_087f616c50552a115322a915ad99e3c1);
+            
+        
+
+        circle_marker_f53c72acd146a31860911e7e52d1a1a8.bindPopup(popup_df609e70b0b1b18257c34308e45d9218)
+        ;
+
+        
+    
+    
+            circle_marker_f53c72acd146a31860911e7e52d1a1a8.bindTooltip(
+                `<div>
+                     2021-12-17 20:53:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6236e2a0f84de1ff594bb8b245bb5d9f = L.circleMarker(
+                [54.628883, 14.349685],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_aefda8fa58975d88a5555562b4323db4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a85cba7f2dc40c63682d41e478ddb96 = $(`<div id="html_4a85cba7f2dc40c63682d41e478ddb96" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:54:03<br>Lat/Lon: (54.628883, 14.349685)<br>SOG: 4.60 kn</div>`)[0];
+                popup_aefda8fa58975d88a5555562b4323db4.setContent(html_4a85cba7f2dc40c63682d41e478ddb96);
+            
+        
+
+        circle_marker_6236e2a0f84de1ff594bb8b245bb5d9f.bindPopup(popup_aefda8fa58975d88a5555562b4323db4)
+        ;
+
+        
+    
+    
+            circle_marker_6236e2a0f84de1ff594bb8b245bb5d9f.bindTooltip(
+                `<div>
+                     2021-12-17 20:54:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bcd4d40c57975c053527ee3bb67d149b = L.circleMarker(
+                [54.62868, 14.349783],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_9158b84c20026332b5199df50d6939f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6beb3c5e9bf4e0adc7e504ae897745c4 = $(`<div id="html_6beb3c5e9bf4e0adc7e504ae897745c4" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:54:12<br>Lat/Lon: (54.628680, 14.349783)<br>SOG: 4.50 kn</div>`)[0];
+                popup_9158b84c20026332b5199df50d6939f7.setContent(html_6beb3c5e9bf4e0adc7e504ae897745c4);
+            
+        
+
+        circle_marker_bcd4d40c57975c053527ee3bb67d149b.bindPopup(popup_9158b84c20026332b5199df50d6939f7)
+        ;
+
+        
+    
+    
+            circle_marker_bcd4d40c57975c053527ee3bb67d149b.bindTooltip(
+                `<div>
+                     2021-12-17 20:54:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2fb159971e7375cddc2a871227606ab0 = L.circleMarker(
+                [54.628467, 14.349915],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_31121b306a219a017a6afc916c6c4ba2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7311b806a9a1fcd5c414fa5a5a2ff097 = $(`<div id="html_7311b806a9a1fcd5c414fa5a5a2ff097" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:54:22<br>Lat/Lon: (54.628467, 14.349915)<br>SOG: 5.50 kn</div>`)[0];
+                popup_31121b306a219a017a6afc916c6c4ba2.setContent(html_7311b806a9a1fcd5c414fa5a5a2ff097);
+            
+        
+
+        circle_marker_2fb159971e7375cddc2a871227606ab0.bindPopup(popup_31121b306a219a017a6afc916c6c4ba2)
+        ;
+
+        
+    
+    
+            circle_marker_2fb159971e7375cddc2a871227606ab0.bindTooltip(
+                `<div>
+                     2021-12-17 20:54:22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7960847439a865edc7d57c473329e7ba = L.circleMarker(
+                [54.62825, 14.350018],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_0a4fb4d2afedc34e8ea6de92a78da07b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_039b5e96dbb1bd5d29761072efeb9e07 = $(`<div id="html_039b5e96dbb1bd5d29761072efeb9e07" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:54:32<br>Lat/Lon: (54.628250, 14.350018)<br>SOG: 5.20 kn</div>`)[0];
+                popup_0a4fb4d2afedc34e8ea6de92a78da07b.setContent(html_039b5e96dbb1bd5d29761072efeb9e07);
+            
+        
+
+        circle_marker_7960847439a865edc7d57c473329e7ba.bindPopup(popup_0a4fb4d2afedc34e8ea6de92a78da07b)
+        ;
+
+        
+    
+    
+            circle_marker_7960847439a865edc7d57c473329e7ba.bindTooltip(
+                `<div>
+                     2021-12-17 20:54:32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_34dfef5e74e78f44472bf12ea8c574a0 = L.circleMarker(
+                [54.628053, 14.350038],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_481364618ed5b8d0786c975a408b3b4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1261a0fcbd75963b5ce3b4a59a632ef = $(`<div id="html_b1261a0fcbd75963b5ce3b4a59a632ef" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:54:42<br>Lat/Lon: (54.628053, 14.350038)<br>SOG: 4.50 kn</div>`)[0];
+                popup_481364618ed5b8d0786c975a408b3b4d.setContent(html_b1261a0fcbd75963b5ce3b4a59a632ef);
+            
+        
+
+        circle_marker_34dfef5e74e78f44472bf12ea8c574a0.bindPopup(popup_481364618ed5b8d0786c975a408b3b4d)
+        ;
+
+        
+    
+    
+            circle_marker_34dfef5e74e78f44472bf12ea8c574a0.bindTooltip(
+                `<div>
+                     2021-12-17 20:54:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aa6ac73f56d5ad3f5e36507d71d5ee46 = L.circleMarker(
+                [54.627637, 14.349652],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_e250c3ff2fd7d0c027a92f332dea41b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_168f5d6d8988c3675e4f6a1269f96947 = $(`<div id="html_168f5d6d8988c3675e4f6a1269f96947" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:55:03<br>Lat/Lon: (54.627637, 14.349652)<br>SOG: 6.20 kn</div>`)[0];
+                popup_e250c3ff2fd7d0c027a92f332dea41b1.setContent(html_168f5d6d8988c3675e4f6a1269f96947);
+            
+        
+
+        circle_marker_aa6ac73f56d5ad3f5e36507d71d5ee46.bindPopup(popup_e250c3ff2fd7d0c027a92f332dea41b1)
+        ;
+
+        
+    
+    
+            circle_marker_aa6ac73f56d5ad3f5e36507d71d5ee46.bindTooltip(
+                `<div>
+                     2021-12-17 20:55:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8c7704c86063c02de695ac1ad6b66139 = L.circleMarker(
+                [54.627607, 14.349248],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_c356f569c25b8687dd7279a2c164c96f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6bac4c2cfdf8d7e991c8ccdca442bed2 = $(`<div id="html_6bac4c2cfdf8d7e991c8ccdca442bed2" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:55:12<br>Lat/Lon: (54.627607, 14.349248)<br>SOG: 6.20 kn</div>`)[0];
+                popup_c356f569c25b8687dd7279a2c164c96f.setContent(html_6bac4c2cfdf8d7e991c8ccdca442bed2);
+            
+        
+
+        circle_marker_8c7704c86063c02de695ac1ad6b66139.bindPopup(popup_c356f569c25b8687dd7279a2c164c96f)
+        ;
+
+        
+    
+    
+            circle_marker_8c7704c86063c02de695ac1ad6b66139.bindTooltip(
+                `<div>
+                     2021-12-17 20:55:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_db109891ac39da28b6e1700b7ac895a1 = L.circleMarker(
+                [54.627947, 14.348435],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_5881581ab40cc83ff3f30ce62877fda5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d80795b55ff757f1df90bb8ce6495d8c = $(`<div id="html_d80795b55ff757f1df90bb8ce6495d8c" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:55:32<br>Lat/Lon: (54.627947, 14.348435)<br>SOG: 7.40 kn</div>`)[0];
+                popup_5881581ab40cc83ff3f30ce62877fda5.setContent(html_d80795b55ff757f1df90bb8ce6495d8c);
+            
+        
+
+        circle_marker_db109891ac39da28b6e1700b7ac895a1.bindPopup(popup_5881581ab40cc83ff3f30ce62877fda5)
+        ;
+
+        
+    
+    
+            circle_marker_db109891ac39da28b6e1700b7ac895a1.bindTooltip(
+                `<div>
+                     2021-12-17 20:55:32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f7c0d8bd39d8fd8af29790109f4f5465 = L.circleMarker(
+                [54.628133, 14.348028],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_ca1055626ae7cce548c8920dfc9c3f0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_644fc987df92c0fea3b7e66ece3fa5e5 = $(`<div id="html_644fc987df92c0fea3b7e66ece3fa5e5" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:55:42<br>Lat/Lon: (54.628133, 14.348028)<br>SOG: 6.70 kn</div>`)[0];
+                popup_ca1055626ae7cce548c8920dfc9c3f0b.setContent(html_644fc987df92c0fea3b7e66ece3fa5e5);
+            
+        
+
+        circle_marker_f7c0d8bd39d8fd8af29790109f4f5465.bindPopup(popup_ca1055626ae7cce548c8920dfc9c3f0b)
+        ;
+
+        
+    
+    
+            circle_marker_f7c0d8bd39d8fd8af29790109f4f5465.bindTooltip(
+                `<div>
+                     2021-12-17 20:55:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_535fee214bda4329dd8e42ffa96f4807 = L.circleMarker(
+                [54.62864, 14.347042],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_c81c2ef9ec5832a3848efc85f64958fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_296dfa3e825b6bd871cf5e1b08440ff7 = $(`<div id="html_296dfa3e825b6bd871cf5e1b08440ff7" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:56:03<br>Lat/Lon: (54.628640, 14.347042)<br>SOG: 7.60 kn</div>`)[0];
+                popup_c81c2ef9ec5832a3848efc85f64958fd.setContent(html_296dfa3e825b6bd871cf5e1b08440ff7);
+            
+        
+
+        circle_marker_535fee214bda4329dd8e42ffa96f4807.bindPopup(popup_c81c2ef9ec5832a3848efc85f64958fd)
+        ;
+
+        
+    
+    
+            circle_marker_535fee214bda4329dd8e42ffa96f4807.bindTooltip(
+                `<div>
+                     2021-12-17 20:56:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9f966017cd72ebc8c54d420318f24c06 = L.circleMarker(
+                [54.62889, 14.346752],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_0384b8c5863d858a391a8fade89450a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a471dc9302344744bda5a9d9c538b7ce = $(`<div id="html_a471dc9302344744bda5a9d9c538b7ce" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:56:12<br>Lat/Lon: (54.628890, 14.346752)<br>SOG: 7.30 kn</div>`)[0];
+                popup_0384b8c5863d858a391a8fade89450a1.setContent(html_a471dc9302344744bda5a9d9c538b7ce);
+            
+        
+
+        circle_marker_9f966017cd72ebc8c54d420318f24c06.bindPopup(popup_0384b8c5863d858a391a8fade89450a1)
+        ;
+
+        
+    
+    
+            circle_marker_9f966017cd72ebc8c54d420318f24c06.bindTooltip(
+                `<div>
+                     2021-12-17 20:56:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2359b5c9da84093976ff437964de6b84 = L.circleMarker(
+                [54.62955, 14.346585],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_d79cf63388dc59ac3984728c09efae80 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c827c784ff52ac481c465dc8c79b30c4 = $(`<div id="html_c827c784ff52ac481c465dc8c79b30c4" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:56:32<br>Lat/Lon: (54.629550, 14.346585)<br>SOG: 6.20 kn</div>`)[0];
+                popup_d79cf63388dc59ac3984728c09efae80.setContent(html_c827c784ff52ac481c465dc8c79b30c4);
+            
+        
+
+        circle_marker_2359b5c9da84093976ff437964de6b84.bindPopup(popup_d79cf63388dc59ac3984728c09efae80)
+        ;
+
+        
+    
+    
+            circle_marker_2359b5c9da84093976ff437964de6b84.bindTooltip(
+                `<div>
+                     2021-12-17 20:56:32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6872a1350bf941a3c1099635d74916e4 = L.circleMarker(
+                [54.63064, 14.34633],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_454312a97f1aa6a0c0a57725f09bd5c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a5668d7c7861f180659a5ee0c886f24 = $(`<div id="html_5a5668d7c7861f180659a5ee0c886f24" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:57:12<br>Lat/Lon: (54.630640, 14.346330)<br>SOG: 4.40 kn</div>`)[0];
+                popup_454312a97f1aa6a0c0a57725f09bd5c2.setContent(html_5a5668d7c7861f180659a5ee0c886f24);
+            
+        
+
+        circle_marker_6872a1350bf941a3c1099635d74916e4.bindPopup(popup_454312a97f1aa6a0c0a57725f09bd5c2)
+        ;
+
+        
+    
+    
+            circle_marker_6872a1350bf941a3c1099635d74916e4.bindTooltip(
+                `<div>
+                     2021-12-17 20:57:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_47d5ced4133f582e4072813bea230bbd = L.circleMarker(
+                [54.631, 14.346695],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_996a962ea29bc610e7a227b4e9d0a7d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1005b3e875c92b0f8ded82e3645737a2 = $(`<div id="html_1005b3e875c92b0f8ded82e3645737a2" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:57:33<br>Lat/Lon: (54.631000, 14.346695)<br>SOG: 4.10 kn</div>`)[0];
+                popup_996a962ea29bc610e7a227b4e9d0a7d9.setContent(html_1005b3e875c92b0f8ded82e3645737a2);
+            
+        
+
+        circle_marker_47d5ced4133f582e4072813bea230bbd.bindPopup(popup_996a962ea29bc610e7a227b4e9d0a7d9)
+        ;
+
+        
+    
+    
+            circle_marker_47d5ced4133f582e4072813bea230bbd.bindTooltip(
+                `<div>
+                     2021-12-17 20:57:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7489a01793631de440901bd78e1a07aa = L.circleMarker(
+                [54.631047, 14.346945],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_b075a27c9bbe892ceb0bf099fa298e92 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_febf537a6e19dbc2613c5208a63fcc59 = $(`<div id="html_febf537a6e19dbc2613c5208a63fcc59" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:57:42<br>Lat/Lon: (54.631047, 14.346945)<br>SOG: 4.30 kn</div>`)[0];
+                popup_b075a27c9bbe892ceb0bf099fa298e92.setContent(html_febf537a6e19dbc2613c5208a63fcc59);
+            
+        
+
+        circle_marker_7489a01793631de440901bd78e1a07aa.bindPopup(popup_b075a27c9bbe892ceb0bf099fa298e92)
+        ;
+
+        
+    
+    
+            circle_marker_7489a01793631de440901bd78e1a07aa.bindTooltip(
+                `<div>
+                     2021-12-17 20:57:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4b9f00d56966ed56ffde6698842392da = L.circleMarker(
+                [54.631063, 14.347308],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_25a345ee5e51977df3dba8c890e8da8b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e0ffa0ef02505dc5c6482f8cb4fca83 = $(`<div id="html_5e0ffa0ef02505dc5c6482f8cb4fca83" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:57:52<br>Lat/Lon: (54.631063, 14.347308)<br>SOG: 4.30 kn</div>`)[0];
+                popup_25a345ee5e51977df3dba8c890e8da8b.setContent(html_5e0ffa0ef02505dc5c6482f8cb4fca83);
+            
+        
+
+        circle_marker_4b9f00d56966ed56ffde6698842392da.bindPopup(popup_25a345ee5e51977df3dba8c890e8da8b)
+        ;
+
+        
+    
+    
+            circle_marker_4b9f00d56966ed56ffde6698842392da.bindTooltip(
+                `<div>
+                     2021-12-17 20:57:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_50bab34447364ca3f4de8aa1c046c8d4 = L.circleMarker(
+                [54.631, 14.347673],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_8fcf334bdf8b89742047df0ea1caaa07 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f4b30eebed6c8e140bea88c0e00eac1 = $(`<div id="html_2f4b30eebed6c8e140bea88c0e00eac1" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:58:03<br>Lat/Lon: (54.631000, 14.347673)<br>SOG: 4.50 kn</div>`)[0];
+                popup_8fcf334bdf8b89742047df0ea1caaa07.setContent(html_2f4b30eebed6c8e140bea88c0e00eac1);
+            
+        
+
+        circle_marker_50bab34447364ca3f4de8aa1c046c8d4.bindPopup(popup_8fcf334bdf8b89742047df0ea1caaa07)
+        ;
+
+        
+    
+    
+            circle_marker_50bab34447364ca3f4de8aa1c046c8d4.bindTooltip(
+                `<div>
+                     2021-12-17 20:58:03
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d672905641da81dccf8f7907d2717a54 = L.circleMarker(
+                [54.630893, 14.347932],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_6d9fb4f45d2190fc7aab001cb1524a28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b3d408b05a66932b460f06e7d5f12ce = $(`<div id="html_5b3d408b05a66932b460f06e7d5f12ce" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:58:12<br>Lat/Lon: (54.630893, 14.347932)<br>SOG: 4.70 kn</div>`)[0];
+                popup_6d9fb4f45d2190fc7aab001cb1524a28.setContent(html_5b3d408b05a66932b460f06e7d5f12ce);
+            
+        
+
+        circle_marker_d672905641da81dccf8f7907d2717a54.bindPopup(popup_6d9fb4f45d2190fc7aab001cb1524a28)
+        ;
+
+        
+    
+    
+            circle_marker_d672905641da81dccf8f7907d2717a54.bindTooltip(
+                `<div>
+                     2021-12-17 20:58:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_34ca25fe6380225a04cdd1b3d8e03092 = L.circleMarker(
+                [54.63074, 14.34812],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_4701f1a141c8041bf03a55bf521c6f83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2446b2b041ac26b28d3f20a99f6c5b20 = $(`<div id="html_2446b2b041ac26b28d3f20a99f6c5b20" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:58:23<br>Lat/Lon: (54.630740, 14.348120)<br>SOG: 3.60 kn</div>`)[0];
+                popup_4701f1a141c8041bf03a55bf521c6f83.setContent(html_2446b2b041ac26b28d3f20a99f6c5b20);
+            
+        
+
+        circle_marker_34ca25fe6380225a04cdd1b3d8e03092.bindPopup(popup_4701f1a141c8041bf03a55bf521c6f83)
+        ;
+
+        
+    
+    
+            circle_marker_34ca25fe6380225a04cdd1b3d8e03092.bindTooltip(
+                `<div>
+                     2021-12-17 20:58:23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0a87a06c8b0ecf669796ce6091e9ac32 = L.circleMarker(
+                [54.630617, 14.348225],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_377722fc0d8d054cc175ad49e161cf32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c3db8b15c71b9d2b714ec9f9b3be1dd5 = $(`<div id="html_c3db8b15c71b9d2b714ec9f9b3be1dd5" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:58:33<br>Lat/Lon: (54.630617, 14.348225)<br>SOG: 3.70 kn</div>`)[0];
+                popup_377722fc0d8d054cc175ad49e161cf32.setContent(html_c3db8b15c71b9d2b714ec9f9b3be1dd5);
+            
+        
+
+        circle_marker_0a87a06c8b0ecf669796ce6091e9ac32.bindPopup(popup_377722fc0d8d054cc175ad49e161cf32)
+        ;
+
+        
+    
+    
+            circle_marker_0a87a06c8b0ecf669796ce6091e9ac32.bindTooltip(
+                `<div>
+                     2021-12-17 20:58:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8f11fa676d80cb95450820f7ba9d6f54 = L.circleMarker(
+                [54.630543, 14.348303],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_61c980489a617390ca4dd3c387128631 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d1e0c77528253bc5aee28ceb5382a59 = $(`<div id="html_1d1e0c77528253bc5aee28ceb5382a59" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:58:42<br>Lat/Lon: (54.630543, 14.348303)<br>SOG: 3.40 kn</div>`)[0];
+                popup_61c980489a617390ca4dd3c387128631.setContent(html_1d1e0c77528253bc5aee28ceb5382a59);
+            
+        
+
+        circle_marker_8f11fa676d80cb95450820f7ba9d6f54.bindPopup(popup_61c980489a617390ca4dd3c387128631)
+        ;
+
+        
+    
+    
+            circle_marker_8f11fa676d80cb95450820f7ba9d6f54.bindTooltip(
+                `<div>
+                     2021-12-17 20:58:42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_45e61863512e50191f1b5aaa3042dcc0 = L.circleMarker(
+                [54.630437, 14.34837],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_28ccb8b15fb8a1f4a6e3c0b19a5f6733 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4699f2fa0b45835e0eaba305afc4c9e9 = $(`<div id="html_4699f2fa0b45835e0eaba305afc4c9e9" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:58:52<br>Lat/Lon: (54.630437, 14.348370)<br>SOG: 2.40 kn</div>`)[0];
+                popup_28ccb8b15fb8a1f4a6e3c0b19a5f6733.setContent(html_4699f2fa0b45835e0eaba305afc4c9e9);
+            
+        
+
+        circle_marker_45e61863512e50191f1b5aaa3042dcc0.bindPopup(popup_28ccb8b15fb8a1f4a6e3c0b19a5f6733)
+        ;
+
+        
+    
+    
+            circle_marker_45e61863512e50191f1b5aaa3042dcc0.bindTooltip(
+                `<div>
+                     2021-12-17 20:58:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5f9f2fb7407cc474aa3e5ed718684479 = L.circleMarker(
+                [54.63034, 14.348423],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_08beba880677581b0a2face54a51a5c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_edacfe4689865edacf40ac0a21af6447 = $(`<div id="html_edacfe4689865edacf40ac0a21af6447" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:59:04<br>Lat/Lon: (54.630340, 14.348423)<br>SOG: 2.20 kn</div>`)[0];
+                popup_08beba880677581b0a2face54a51a5c9.setContent(html_edacfe4689865edacf40ac0a21af6447);
+            
+        
+
+        circle_marker_5f9f2fb7407cc474aa3e5ed718684479.bindPopup(popup_08beba880677581b0a2face54a51a5c9)
+        ;
+
+        
+    
+    
+            circle_marker_5f9f2fb7407cc474aa3e5ed718684479.bindTooltip(
+                `<div>
+                     2021-12-17 20:59:04
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_01398114a8a0e950b202cb793ba02a1e = L.circleMarker(
+                [54.630233, 14.348432],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_c8bed1c51230906f886a00e4b0b99b61 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e29fd8dd593bb14441b83f9d720bc9b7 = $(`<div id="html_e29fd8dd593bb14441b83f9d720bc9b7" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:59:13<br>Lat/Lon: (54.630233, 14.348432)<br>SOG: 4.20 kn</div>`)[0];
+                popup_c8bed1c51230906f886a00e4b0b99b61.setContent(html_e29fd8dd593bb14441b83f9d720bc9b7);
+            
+        
+
+        circle_marker_01398114a8a0e950b202cb793ba02a1e.bindPopup(popup_c8bed1c51230906f886a00e4b0b99b61)
+        ;
+
+        
+    
+    
+            circle_marker_01398114a8a0e950b202cb793ba02a1e.bindTooltip(
+                `<div>
+                     2021-12-17 20:59:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e8f57c319e76b10c6be980a5d4b5c649 = L.circleMarker(
+                [54.630103, 14.348523],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_ac76f5ea0ccb4989c44e840dfe3e6650 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2bcf30cf9a48b249a8a7c211a0dfb271 = $(`<div id="html_2bcf30cf9a48b249a8a7c211a0dfb271" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:59:23<br>Lat/Lon: (54.630103, 14.348523)<br>SOG: 3.80 kn</div>`)[0];
+                popup_ac76f5ea0ccb4989c44e840dfe3e6650.setContent(html_2bcf30cf9a48b249a8a7c211a0dfb271);
+            
+        
+
+        circle_marker_e8f57c319e76b10c6be980a5d4b5c649.bindPopup(popup_ac76f5ea0ccb4989c44e840dfe3e6650)
+        ;
+
+        
+    
+    
+            circle_marker_e8f57c319e76b10c6be980a5d4b5c649.bindTooltip(
+                `<div>
+                     2021-12-17 20:59:23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c465d6a29a4409203d83262de8386136 = L.circleMarker(
+                [54.629957, 14.348643],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_3209947c025a04aeac7f8beebcd8cbee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc0cd670b770855826e4515132ac4423 = $(`<div id="html_fc0cd670b770855826e4515132ac4423" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:59:33<br>Lat/Lon: (54.629957, 14.348643)<br>SOG: 3.60 kn</div>`)[0];
+                popup_3209947c025a04aeac7f8beebcd8cbee.setContent(html_fc0cd670b770855826e4515132ac4423);
+            
+        
+
+        circle_marker_c465d6a29a4409203d83262de8386136.bindPopup(popup_3209947c025a04aeac7f8beebcd8cbee)
+        ;
+
+        
+    
+    
+            circle_marker_c465d6a29a4409203d83262de8386136.bindTooltip(
+                `<div>
+                     2021-12-17 20:59:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b9c00375e6d6bbcebfdd5280c0fc0385 = L.circleMarker(
+                [54.629827, 14.34869],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_a56bab66e69d474e4bd58f7dc4c4ff05 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_157f526b45e2d196a834fa6b98ea7e8a = $(`<div id="html_157f526b45e2d196a834fa6b98ea7e8a" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:59:44<br>Lat/Lon: (54.629827, 14.348690)<br>SOG: 2.40 kn</div>`)[0];
+                popup_a56bab66e69d474e4bd58f7dc4c4ff05.setContent(html_157f526b45e2d196a834fa6b98ea7e8a);
+            
+        
+
+        circle_marker_b9c00375e6d6bbcebfdd5280c0fc0385.bindPopup(popup_a56bab66e69d474e4bd58f7dc4c4ff05)
+        ;
+
+        
+    
+    
+            circle_marker_b9c00375e6d6bbcebfdd5280c0fc0385.bindTooltip(
+                `<div>
+                     2021-12-17 20:59:44
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1ac15933bb0a93c9c8d7c499b309b755 = L.circleMarker(
+                [54.629713, 14.348695],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_b08948b4bf2f0e75227341f9788714b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3c0f3f3ef29a1ca7ea82a47a1c377d9 = $(`<div id="html_e3c0f3f3ef29a1ca7ea82a47a1c377d9" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 20:59:52<br>Lat/Lon: (54.629713, 14.348695)<br>SOG: 3.20 kn</div>`)[0];
+                popup_b08948b4bf2f0e75227341f9788714b8.setContent(html_e3c0f3f3ef29a1ca7ea82a47a1c377d9);
+            
+        
+
+        circle_marker_1ac15933bb0a93c9c8d7c499b309b755.bindPopup(popup_b08948b4bf2f0e75227341f9788714b8)
+        ;
+
+        
+    
+    
+            circle_marker_1ac15933bb0a93c9c8d7c499b309b755.bindTooltip(
+                `<div>
+                     2021-12-17 20:59:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dd9b535cdada9eff7ea081177beac3e8 = L.circleMarker(
+                [54.6296, 14.348658],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_71fee88a837415a372df843f4cb65604 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2b13dc721009bb6f9725fd03cf717a1 = $(`<div id="html_e2b13dc721009bb6f9725fd03cf717a1" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 21:00:04<br>Lat/Lon: (54.629600, 14.348658)<br>SOG: 2.50 kn</div>`)[0];
+                popup_71fee88a837415a372df843f4cb65604.setContent(html_e2b13dc721009bb6f9725fd03cf717a1);
+            
+        
+
+        circle_marker_dd9b535cdada9eff7ea081177beac3e8.bindPopup(popup_71fee88a837415a372df843f4cb65604)
+        ;
+
+        
+    
+    
+            circle_marker_dd9b535cdada9eff7ea081177beac3e8.bindTooltip(
+                `<div>
+                     2021-12-17 21:00:04
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_44e47671604d70872fd179e9a83fd794 = L.circleMarker(
+                [54.629527, 14.348632],
+                {"bubblingMouseEvents": true, "color": "#c51eba", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c51eba", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_bbd22f1d63d9aefedc1b8c8815b22e14 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c713f9447cc7e23039e028ccafe4eda = $(`<div id="html_6c713f9447cc7e23039e028ccafe4eda" style="width: 100.0%; height: 100.0%;">Vessel: DZI-100 (261002520)<br>Time: 2021-12-17 21:00:13<br>Lat/Lon: (54.629527, 14.348632)<br>SOG: 2.10 kn</div>`)[0];
+                popup_bbd22f1d63d9aefedc1b8c8815b22e14.setContent(html_6c713f9447cc7e23039e028ccafe4eda);
+            
+        
+
+        circle_marker_44e47671604d70872fd179e9a83fd794.bindPopup(popup_bbd22f1d63d9aefedc1b8c8815b22e14)
+        ;
+
+        
+    
+    
+            circle_marker_44e47671604d70872fd179e9a83fd794.bindTooltip(
+                `<div>
+                     2021-12-17 21:00:13
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_70b7419710ef46b98b21722c7006bc51 = L.polyline(
+                [[54.644763, 14.333342], [54.644235, 14.33294], [54.643795, 14.332697], [54.642597, 14.33281], [54.641895, 14.333167], [54.641895, 14.333167], [54.64031, 14.337887], [54.637667, 14.342522], [54.636287, 14.344173], [54.635547, 14.344812], [54.634808, 14.345403], [54.634808, 14.345403], [54.633388, 14.346545], [54.631168, 14.347977], [54.630557, 14.347563], [54.630387, 14.347622], [54.630308, 14.347685], [54.630308, 14.347685], [54.630243, 14.347783], [54.630243, 14.347783], [54.63014, 14.347947]],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#4575b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+            poly_line_70b7419710ef46b98b21722c7006bc51.bindTooltip(
+                `<div>
+                     DZI-10 (261018880)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8a94cad83d512c4fdaf140a2f19c5ef = L.circleMarker(
+                [54.644763, 14.333342],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+            var circle_marker_ec23de899c6a0001dd1e2517e21781e0 = L.circleMarker(
+                [54.644763, 14.333342],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_0050d676d9a9f50c9a69a645d03888cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_86a256099d3e2fa481f2a39c031a6a99 = $(`<div id="html_86a256099d3e2fa481f2a39c031a6a99" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:40:56<br>Lat/Lon: (54.644763, 14.333342)<br>SOG: 1.60 kn</div>`)[0];
+                popup_0050d676d9a9f50c9a69a645d03888cd.setContent(html_86a256099d3e2fa481f2a39c031a6a99);
+            
+        
+
+        circle_marker_ec23de899c6a0001dd1e2517e21781e0.bindPopup(popup_0050d676d9a9f50c9a69a645d03888cd)
+        ;
+
+        
+    
+    
+            circle_marker_ec23de899c6a0001dd1e2517e21781e0.bindTooltip(
+                `<div>
+                     2021-12-17 20:40:56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b1cc2d7aa6a962798ad8b240e2f3cbfc = L.circleMarker(
+                [54.644235, 14.33294],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_8c4ae51062dc0bfdfe02c8c931f3f9c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_196f6b8e05df745ec3dd656adc706448 = $(`<div id="html_196f6b8e05df745ec3dd656adc706448" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:41:54<br>Lat/Lon: (54.644235, 14.332940)<br>SOG: 2.50 kn</div>`)[0];
+                popup_8c4ae51062dc0bfdfe02c8c931f3f9c2.setContent(html_196f6b8e05df745ec3dd656adc706448);
+            
+        
+
+        circle_marker_b1cc2d7aa6a962798ad8b240e2f3cbfc.bindPopup(popup_8c4ae51062dc0bfdfe02c8c931f3f9c2)
+        ;
+
+        
+    
+    
+            circle_marker_b1cc2d7aa6a962798ad8b240e2f3cbfc.bindTooltip(
+                `<div>
+                     2021-12-17 20:41:54
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7077124292edada6afe767064746a750 = L.circleMarker(
+                [54.643795, 14.332697],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_a6e1df01a9da7c336c10c8c433954707 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cddd444764bfe2fc24578ba178b8c247 = $(`<div id="html_cddd444764bfe2fc24578ba178b8c247" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:42:24<br>Lat/Lon: (54.643795, 14.332697)<br>SOG: 4.00 kn</div>`)[0];
+                popup_a6e1df01a9da7c336c10c8c433954707.setContent(html_cddd444764bfe2fc24578ba178b8c247);
+            
+        
+
+        circle_marker_7077124292edada6afe767064746a750.bindPopup(popup_a6e1df01a9da7c336c10c8c433954707)
+        ;
+
+        
+    
+    
+            circle_marker_7077124292edada6afe767064746a750.bindTooltip(
+                `<div>
+                     2021-12-17 20:42:24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e7de595e6d8e904de8bd68e2ec90cddc = L.circleMarker(
+                [54.642597, 14.33281],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_c0aa1f80b0e7e59f3e7621c08ddbf0f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0968d38207b488cfc951940b357e28e1 = $(`<div id="html_0968d38207b488cfc951940b357e28e1" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:43:23<br>Lat/Lon: (54.642597, 14.332810)<br>SOG: 5.10 kn</div>`)[0];
+                popup_c0aa1f80b0e7e59f3e7621c08ddbf0f7.setContent(html_0968d38207b488cfc951940b357e28e1);
+            
+        
+
+        circle_marker_e7de595e6d8e904de8bd68e2ec90cddc.bindPopup(popup_c0aa1f80b0e7e59f3e7621c08ddbf0f7)
+        ;
+
+        
+    
+    
+            circle_marker_e7de595e6d8e904de8bd68e2ec90cddc.bindTooltip(
+                `<div>
+                     2021-12-17 20:43:23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8c742477c2242beed34468e4bf87c87c = L.circleMarker(
+                [54.641895, 14.333167],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_7ab21aa3c845143dd2352b4d91a71f59 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb92e1ceafba8be7028d4ec58e803e5d = $(`<div id="html_eb92e1ceafba8be7028d4ec58e803e5d" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:43:53<br>Lat/Lon: (54.641895, 14.333167)<br>SOG: 4.90 kn</div>`)[0];
+                popup_7ab21aa3c845143dd2352b4d91a71f59.setContent(html_eb92e1ceafba8be7028d4ec58e803e5d);
+            
+        
+
+        circle_marker_8c742477c2242beed34468e4bf87c87c.bindPopup(popup_7ab21aa3c845143dd2352b4d91a71f59)
+        ;
+
+        
+    
+    
+            circle_marker_8c742477c2242beed34468e4bf87c87c.bindTooltip(
+                `<div>
+                     2021-12-17 20:43:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_53ca94ee948572bad15802897eeb1d35 = L.circleMarker(
+                [54.641895, 14.333167],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_3e815c8ad7a389f19a0d54cb2e29a7a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_faa951a7b44f7e2d1b37dffcd7af426a = $(`<div id="html_faa951a7b44f7e2d1b37dffcd7af426a" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:44:49<br>Lat/Lon: (54.641895, 14.333167)<br>SOG: 4.90 kn</div>`)[0];
+                popup_3e815c8ad7a389f19a0d54cb2e29a7a9.setContent(html_faa951a7b44f7e2d1b37dffcd7af426a);
+            
+        
+
+        circle_marker_53ca94ee948572bad15802897eeb1d35.bindPopup(popup_3e815c8ad7a389f19a0d54cb2e29a7a9)
+        ;
+
+        
+    
+    
+            circle_marker_53ca94ee948572bad15802897eeb1d35.bindTooltip(
+                `<div>
+                     2021-12-17 20:44:49
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f838e27588d604d7083832ed59b514d7 = L.circleMarker(
+                [54.64031, 14.337887],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_cb70155fd0005077ad93f4bf1a4f92f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d26e3235be913ffe4d5f8a623a93953 = $(`<div id="html_1d26e3235be913ffe4d5f8a623a93953" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:45:56<br>Lat/Lon: (54.640310, 14.337887)<br>SOG: 5.70 kn</div>`)[0];
+                popup_cb70155fd0005077ad93f4bf1a4f92f1.setContent(html_1d26e3235be913ffe4d5f8a623a93953);
+            
+        
+
+        circle_marker_f838e27588d604d7083832ed59b514d7.bindPopup(popup_cb70155fd0005077ad93f4bf1a4f92f1)
+        ;
+
+        
+    
+    
+            circle_marker_f838e27588d604d7083832ed59b514d7.bindTooltip(
+                `<div>
+                     2021-12-17 20:45:56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f59c12476b0015a621b84795cdead4e7 = L.circleMarker(
+                [54.637667, 14.342522],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_6225b1026adf39681d15b372b5d10059 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6e7e66a53e5613a2fef8106af05fc65 = $(`<div id="html_c6e7e66a53e5613a2fef8106af05fc65" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:48:24<br>Lat/Lon: (54.637667, 14.342522)<br>SOG: 5.80 kn</div>`)[0];
+                popup_6225b1026adf39681d15b372b5d10059.setContent(html_c6e7e66a53e5613a2fef8106af05fc65);
+            
+        
+
+        circle_marker_f59c12476b0015a621b84795cdead4e7.bindPopup(popup_6225b1026adf39681d15b372b5d10059)
+        ;
+
+        
+    
+    
+            circle_marker_f59c12476b0015a621b84795cdead4e7.bindTooltip(
+                `<div>
+                     2021-12-17 20:48:24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ea8e1ee15688b979c9d4c40e89ce6164 = L.circleMarker(
+                [54.636287, 14.344173],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_e3bb43f4e3d70d7ffcdf346b577038c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f28259e1b356456d837c9d9022c48e0a = $(`<div id="html_f28259e1b356456d837c9d9022c48e0a" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:49:24<br>Lat/Lon: (54.636287, 14.344173)<br>SOG: 6.20 kn</div>`)[0];
+                popup_e3bb43f4e3d70d7ffcdf346b577038c1.setContent(html_f28259e1b356456d837c9d9022c48e0a);
+            
+        
+
+        circle_marker_ea8e1ee15688b979c9d4c40e89ce6164.bindPopup(popup_e3bb43f4e3d70d7ffcdf346b577038c1)
+        ;
+
+        
+    
+    
+            circle_marker_ea8e1ee15688b979c9d4c40e89ce6164.bindTooltip(
+                `<div>
+                     2021-12-17 20:49:24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_26b4c0f431b3893f3b4c6bee101448d6 = L.circleMarker(
+                [54.635547, 14.344812],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_8def6196af61504071e28b8e7eee0bc0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc390e93f8bad1549e2282e962672895 = $(`<div id="html_fc390e93f8bad1549e2282e962672895" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:49:54<br>Lat/Lon: (54.635547, 14.344812)<br>SOG: 6.00 kn</div>`)[0];
+                popup_8def6196af61504071e28b8e7eee0bc0.setContent(html_fc390e93f8bad1549e2282e962672895);
+            
+        
+
+        circle_marker_26b4c0f431b3893f3b4c6bee101448d6.bindPopup(popup_8def6196af61504071e28b8e7eee0bc0)
+        ;
+
+        
+    
+    
+            circle_marker_26b4c0f431b3893f3b4c6bee101448d6.bindTooltip(
+                `<div>
+                     2021-12-17 20:49:54
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_620b06d70e6603eedefc22b59618a686 = L.circleMarker(
+                [54.634808, 14.345403],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_bf00dbd15b2f667ed9d6d056693568f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_58d6576516010d077f81b6560b24c64d = $(`<div id="html_58d6576516010d077f81b6560b24c64d" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:50:24<br>Lat/Lon: (54.634808, 14.345403)<br>SOG: 6.50 kn</div>`)[0];
+                popup_bf00dbd15b2f667ed9d6d056693568f9.setContent(html_58d6576516010d077f81b6560b24c64d);
+            
+        
+
+        circle_marker_620b06d70e6603eedefc22b59618a686.bindPopup(popup_bf00dbd15b2f667ed9d6d056693568f9)
+        ;
+
+        
+    
+    
+            circle_marker_620b06d70e6603eedefc22b59618a686.bindTooltip(
+                `<div>
+                     2021-12-17 20:50:24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2a96cfeb56c3a84cdad2eff2773a1412 = L.circleMarker(
+                [54.634808, 14.345403],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_0fcab6feacc4a95f91f2d0dd09e21fa2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c550b2c224ee29d0315a2da05db3c97c = $(`<div id="html_c550b2c224ee29d0315a2da05db3c97c" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:50:48<br>Lat/Lon: (54.634808, 14.345403)<br>SOG: 6.50 kn</div>`)[0];
+                popup_0fcab6feacc4a95f91f2d0dd09e21fa2.setContent(html_c550b2c224ee29d0315a2da05db3c97c);
+            
+        
+
+        circle_marker_2a96cfeb56c3a84cdad2eff2773a1412.bindPopup(popup_0fcab6feacc4a95f91f2d0dd09e21fa2)
+        ;
+
+        
+    
+    
+            circle_marker_2a96cfeb56c3a84cdad2eff2773a1412.bindTooltip(
+                `<div>
+                     2021-12-17 20:50:48
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_08020388fbaf40ad1c5b0272942ebf27 = L.circleMarker(
+                [54.633388, 14.346545],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_0b28e84176b8d35d2a853553ecf7f4bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_81f69f292d05d1f2012bd374fe9bb63f = $(`<div id="html_81f69f292d05d1f2012bd374fe9bb63f" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:51:24<br>Lat/Lon: (54.633388, 14.346545)<br>SOG: 5.70 kn</div>`)[0];
+                popup_0b28e84176b8d35d2a853553ecf7f4bb.setContent(html_81f69f292d05d1f2012bd374fe9bb63f);
+            
+        
+
+        circle_marker_08020388fbaf40ad1c5b0272942ebf27.bindPopup(popup_0b28e84176b8d35d2a853553ecf7f4bb)
+        ;
+
+        
+    
+    
+            circle_marker_08020388fbaf40ad1c5b0272942ebf27.bindTooltip(
+                `<div>
+                     2021-12-17 20:51:24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_af74324b12f12c44cd3fc884f577bcda = L.circleMarker(
+                [54.631168, 14.347977],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_ffd281ad40fa027adb3e9db2170f17e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c3a102f48677d3891fc9c2534b17865 = $(`<div id="html_9c3a102f48677d3891fc9c2534b17865" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:52:55<br>Lat/Lon: (54.631168, 14.347977)<br>SOG: 3.20 kn</div>`)[0];
+                popup_ffd281ad40fa027adb3e9db2170f17e1.setContent(html_9c3a102f48677d3891fc9c2534b17865);
+            
+        
+
+        circle_marker_af74324b12f12c44cd3fc884f577bcda.bindPopup(popup_ffd281ad40fa027adb3e9db2170f17e1)
+        ;
+
+        
+    
+    
+            circle_marker_af74324b12f12c44cd3fc884f577bcda.bindTooltip(
+                `<div>
+                     2021-12-17 20:52:55
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_990ee5028fe2181f58d8432c99abd049 = L.circleMarker(
+                [54.630557, 14.347563],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_40d2b3bdd9ac58343a6865169c18b99a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_076a686fc60dd3c5a3e841ce62546042 = $(`<div id="html_076a686fc60dd3c5a3e841ce62546042" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:54:53<br>Lat/Lon: (54.630557, 14.347563)<br>SOG: 1.50 kn</div>`)[0];
+                popup_40d2b3bdd9ac58343a6865169c18b99a.setContent(html_076a686fc60dd3c5a3e841ce62546042);
+            
+        
+
+        circle_marker_990ee5028fe2181f58d8432c99abd049.bindPopup(popup_40d2b3bdd9ac58343a6865169c18b99a)
+        ;
+
+        
+    
+    
+            circle_marker_990ee5028fe2181f58d8432c99abd049.bindTooltip(
+                `<div>
+                     2021-12-17 20:54:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c1ed6b6021082610cbcb869602378ffa = L.circleMarker(
+                [54.630387, 14.347622],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_705a8f6b3e2f786f77f0d841e9485739 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95f393bc19bc433cadf11ddeabb692c3 = $(`<div id="html_95f393bc19bc433cadf11ddeabb692c3" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:55:54<br>Lat/Lon: (54.630387, 14.347622)<br>SOG: 0.80 kn</div>`)[0];
+                popup_705a8f6b3e2f786f77f0d841e9485739.setContent(html_95f393bc19bc433cadf11ddeabb692c3);
+            
+        
+
+        circle_marker_c1ed6b6021082610cbcb869602378ffa.bindPopup(popup_705a8f6b3e2f786f77f0d841e9485739)
+        ;
+
+        
+    
+    
+            circle_marker_c1ed6b6021082610cbcb869602378ffa.bindTooltip(
+                `<div>
+                     2021-12-17 20:55:54
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1d96605018dea4811e3474fbe55c1634 = L.circleMarker(
+                [54.630308, 14.347685],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_7fa20f88305745c1ab2d7782721d627c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2afa6b41812c889404b41f1a5a5249a9 = $(`<div id="html_2afa6b41812c889404b41f1a5a5249a9" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:56:24<br>Lat/Lon: (54.630308, 14.347685)<br>SOG: 0.30 kn</div>`)[0];
+                popup_7fa20f88305745c1ab2d7782721d627c.setContent(html_2afa6b41812c889404b41f1a5a5249a9);
+            
+        
+
+        circle_marker_1d96605018dea4811e3474fbe55c1634.bindPopup(popup_7fa20f88305745c1ab2d7782721d627c)
+        ;
+
+        
+    
+    
+            circle_marker_1d96605018dea4811e3474fbe55c1634.bindTooltip(
+                `<div>
+                     2021-12-17 20:56:24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_966dfa25d32586d057222d5579f9e534 = L.circleMarker(
+                [54.630308, 14.347685],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_06ea0364e0173bb9d2784c3198b9978c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad5902fc11736754d58f68e91771734d = $(`<div id="html_ad5902fc11736754d58f68e91771734d" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:56:48<br>Lat/Lon: (54.630308, 14.347685)<br>SOG: 0.30 kn</div>`)[0];
+                popup_06ea0364e0173bb9d2784c3198b9978c.setContent(html_ad5902fc11736754d58f68e91771734d);
+            
+        
+
+        circle_marker_966dfa25d32586d057222d5579f9e534.bindPopup(popup_06ea0364e0173bb9d2784c3198b9978c)
+        ;
+
+        
+    
+    
+            circle_marker_966dfa25d32586d057222d5579f9e534.bindTooltip(
+                `<div>
+                     2021-12-17 20:56:48
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ae3704c35ccf4d48eb50afa0c5289da7 = L.circleMarker(
+                [54.630243, 14.347783],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_cb6d649a768635a492e3946d62d4887d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_648c89356e0cbe57e605de27ca355634 = $(`<div id="html_648c89356e0cbe57e605de27ca355634" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:56:56<br>Lat/Lon: (54.630243, 14.347783)<br>SOG: 1.10 kn</div>`)[0];
+                popup_cb6d649a768635a492e3946d62d4887d.setContent(html_648c89356e0cbe57e605de27ca355634);
+            
+        
+
+        circle_marker_ae3704c35ccf4d48eb50afa0c5289da7.bindPopup(popup_cb6d649a768635a492e3946d62d4887d)
+        ;
+
+        
+    
+    
+            circle_marker_ae3704c35ccf4d48eb50afa0c5289da7.bindTooltip(
+                `<div>
+                     2021-12-17 20:56:56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_690856fe7553ade76a8f0b9af2131162 = L.circleMarker(
+                [54.630243, 14.347783],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_b827de02f45547e8defdb79b420fd28e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c19cc5362c775acdbb04e983134ed81f = $(`<div id="html_c19cc5362c775acdbb04e983134ed81f" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:56:58<br>Lat/Lon: (54.630243, 14.347783)<br>SOG: 1.10 kn</div>`)[0];
+                popup_b827de02f45547e8defdb79b420fd28e.setContent(html_c19cc5362c775acdbb04e983134ed81f);
+            
+        
+
+        circle_marker_690856fe7553ade76a8f0b9af2131162.bindPopup(popup_b827de02f45547e8defdb79b420fd28e)
+        ;
+
+        
+    
+    
+            circle_marker_690856fe7553ade76a8f0b9af2131162.bindTooltip(
+                `<div>
+                     2021-12-17 20:56:58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9c517da5cb72409a9abc4e5def4d823c = L.circleMarker(
+                [54.63014, 14.347947],
+                {"bubblingMouseEvents": true, "color": "#4575b4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4575b4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+        var popup_ec22fe01108380a7911bf85c2f25e234 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5773405b21e0b44c74b0a86dae047a9 = $(`<div id="html_c5773405b21e0b44c74b0a86dae047a9" style="width: 100.0%; height: 100.0%;">Vessel: DZI-10 (261018880)<br>Time: 2021-12-17 20:57:53<br>Lat/Lon: (54.630140, 14.347947)<br>SOG: 0.50 kn</div>`)[0];
+                popup_ec22fe01108380a7911bf85c2f25e234.setContent(html_c5773405b21e0b44c74b0a86dae047a9);
+            
+        
+
+        circle_marker_9c517da5cb72409a9abc4e5def4d823c.bindPopup(popup_ec22fe01108380a7911bf85c2f25e234)
+        ;
+
+        
+    
+    
+            circle_marker_9c517da5cb72409a9abc4e5def4d823c.bindTooltip(
+                `<div>
+                     2021-12-17 20:57:53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8bdaea2223606d1a03729c22969e0b23 = L.marker(
+                [54.634778999999995, 14.345543],
+                {}
+            ).addTo(map_5035bc322fcdeca34a5810ce3ba1c252);
+        
+    
+            var icon_efd2e4d7da8d5fe5e45ea9d9475b71d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8bdaea2223606d1a03729c22969e0b23.setIcon(icon_efd2e4d7da8d5fe5e45ea9d9475b71d5);
+        
+    
+        var popup_7870c62160424368f42c64e5b70ef99c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_61c47a2a4355d7c9c0b6f337518b9712 = $(`<div id="html_61c47a2a4355d7c9c0b6f337518b9712" style="width: 100.0%; height: 100.0%;">Collision/proximity time: 2021-12-17 20:50:13<br>Vessel 1: DZI-100 (261002520)<br>Vessel 2: DZI-10 (261018880)<br>Distance: 0.0103 nm</div>`)[0];
+                popup_7870c62160424368f42c64e5b70ef99c.setContent(html_61c47a2a4355d7c9c0b6f337518b9712);
+            
+        
+
+        marker_8bdaea2223606d1a03729c22969e0b23.bindPopup(popup_7870c62160424368f42c64e5b70ef99c)
+        ;
+
+        
+    
+    
+            marker_8bdaea2223606d1a03729c22969e0b23.bindTooltip(
+                `<div>
+                     Detected collision/proximity point
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
