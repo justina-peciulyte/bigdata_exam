@@ -13,9 +13,9 @@ The assignment was completed in two main parts – dataset preparation and close
 - **Filtering with bounding box** – filtering points that are within a lat/lon delta that corresponds to the radius in NM.
 - **Filtering based on Haversine distance** – filtering observations from the previous step using a 50 NM radius around the center coordinate.
 
-The preprocessing pipeline reduced the dataset size from 52.8 GB to approximately 712 MB (98.6% reduction), making it much more managable to parse and analyze. 
+The preprocessing pipeline reduced the dataset size from 52.8 GB to approximately 712 MB (98.6% reduction), making it much more manageable to parse and analyze. 
 
-The image is available on the Docker Hub image registry: <https://hub.docker.com/repository/docker/justinap4/collision_analysis>. The Python scripts, Dockerfile, and requirements.txt are available on GitHub: <https://github.com/justina-peciulyte/bigdata_exam/>.
+The image is available on the Docker Hub image registry: <https://hub.docker.com/repository/docker/justinap4/ais-collision/general>. The Python scripts, Dockerfile, and requirements.txt are available on GitHub: <https://github.com/justina-peciulyte/bigdata_exam/>.
 
 ## Data Description
 
@@ -57,13 +57,7 @@ Pairwise comparisons between every vessel would result in an impractical Cartesi
 
 Only observations sharing the same temporal and spatial bucket were compared. Next, exact geographical distances were then calculated using the Haversine distance formula and filtered using a  proximity threshold. This significantly reduced the number of distance calculations while preserving nearby vessel encounters.
 
-## Limitations
-
-While the proposed code solution succesfully processes large-scale data and identifies vessel pairs that experienced extremely close spatial proximity, several limitations to the approach must be acknowledged. Most importantly, the distinction between close proximity encounters and actual physical collision between vessels is not realized. 
-
-Many detected proximity events involved rescue vessels and other harbor service vessels operating in close proximity. Such vessels may remain within a few meters of each other for extended periods of time appearing as loitering and causing them to rank highly according to criteria based on distance or number of proximity events despite not representing collisions. A portion of these cases was remedied by excluding a few specific ship types (tug boats, law enforcement, etc.) but some additional categories may have been missed or simply not possible to account for due to incomplete data. 
-
-Therefore, the current implementation identifies the most significant proximity events rather than guaranteeing the detection of a verified physical collision. Additional information such as vessel heading or a more rigorous approach to vessel motion analysis would likely improve collision identification accuracy. Future improvements could include analysis on gaps between observations to verify collisions, as severe crashes between vessels may affect the GPS reporting systems and result in an AIS blackout for one or even both ships involved.
+Intermediate DataFrames used multiple times were cached in memory to avoid repeated recomputation during candidate generation and event ranking.
 
 ## Detected Closest Proximity Event
 
@@ -75,7 +69,17 @@ The algorithm detected several vessel pairs exhibiting sustained close proximity
 - Event timestamp: 2021-12-17 20:50:13
 - Event coordinates: (54.634779, 14.345543)
 
-Interestingly, both involved vessels fishing ships under the Polish flag. Although close proximity (19.07 m) was detected between the two ships, the extracted trajectories surrounding the event show a likely normal encounter. The vessels move close together throughout the 20 minute window and cross each other's trajectories. Trajectory visualization for the selected encounter was generated and exported as an interactive HTML map available in the repository.
+Interestingly, both involved vessels fishing ships under the Polish flag. Although a minimum separation of approximately 19 m was detected, the extracted trajectories suggest that both vessels continued normal movement patterns before and after the encounter. Consequently, the event is interpreted as a close proximity encounter rather than evidence of a confirmed collision. Trajectory visualization for the selected encounter was generated and exported as an interactive HTML map available in the repository.
+
+The resulting implementation should therefore be viewed as a scalable vessel proximity detection system rather than a definitive collision detection system. Its primary contribution is the efficient identification of potentially relevant encounters from a large AIS dataset while maintaining computational feasibility through Spark-based processing and spatial-temporal filtering.
+
+## Limitations
+
+While the proposed code solution succesfully processes large-scale data and identifies vessel pairs that experienced extremely close spatial proximity, several limitations to the approach must be acknowledged. Most importantly, the distinction between close proximity encounters and actual physical collision between vessels is not realized. 
+
+Many detected proximity events involved rescue vessels and other harbor service vessels operating in close proximity. Such vessels may remain within a few meters of each other for extended periods of time appearing as loitering and causing them to rank highly according to criteria based on distance or number of proximity events despite not representing collisions. A portion of these cases was remedied by excluding a few specific ship types (tug boats, law enforcement, etc.) but some additional categories may have been missed or simply not possible to account for due to incomplete data. 
+
+Therefore, the current implementation identifies the most significant proximity events rather than guaranteeing the detection of a verified physical collision. Additional information such as vessel heading or a more rigorous approach to vessel motion analysis would likely improve collision identification accuracy. Future improvements could include analysis on gaps between observations to verify collisions, as severe crashes between vessels may affect the GPS reporting systems and result in an AIS blackout for one or even both ships involved.
 
 ## Project Structure
 
@@ -118,15 +122,17 @@ python main.py --parquet-dir Path/to/Parquet --output-dir Path/to/Output
 
 **Docker Solution**
 
-The container is built using the following command:
+The container is pulled using the following command:
 
 ```bash
-docker build -t ais-collision .
+docker pull justinap4/ais-collision:latest
 ```
+And run using:
 
 ```bash
-docker run --rm -v ${PWD}:/workspace ais-collision
+docker run -v ${PWD}:/workspace justinap4/ais-collision:latest --parquet-dir Data/Parquet --output-dir Output
 ```
+
 The container runs `main.py` by default. To run preprocessing instead, pass a different script:
 
 ```bash
@@ -157,9 +163,12 @@ docker run --rm -v $(pwd):/workspace justinap4/ais-collision:latest python prepr
 
 | Parameter     | Description                                                         |
 |---------------|---------------------------------------------------------------------|
-| --parquet-dir | Directory containing preprocessed parquet files (*must be mounted into the container*).   |
-| --output-dir  | Directory where the HTML map will be written (creates `Output` folder by default).                                  |
-| --map-name    | Filename for the generated HTML map.    |
+| --input-dir | Directory containing input CSV files (default: `Data/Extracted`).   |
+| --input-glob  | File (glob) pattern for daily CSV files (default: `aisdk-2021-12-*.csv`).                                  |
+| --output-dir    | Output directory for parquet files (default: `Data/Parquet`).    |
+| --center-lat    | Center latitude of central coordinate (default: `55.225000`).    |
+| --center-lon    | Center longitude of central coordinate (default: `14.245000`).    |
+| --radius-nm    | Radius around the central coordinate in NM (default: `50`).    |
 
 ## AI Usage Disclosure
 
